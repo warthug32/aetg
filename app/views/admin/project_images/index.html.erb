@@ -1,0 +1,100 @@
+<% content_for :header_meta do%>
+<!-- // Meta //  -->
+<meta charset="utf-8">   
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<% end %>
+
+<% content_for :content do %>
+<article class="full-block clearfix">
+		
+			<div class="article-container">
+            <section>
+				<% if params[:notice] %>
+					<div class="notification success">
+						<a href="#" class="close-notification" title="Hide Notification" rel="tooltip">x</a>
+						<p><strong>Success notification:</strong> <%= params[:notice] %></p>
+					</div>
+				<% end %>
+				<% if params[:warning] %>
+					<div class="notification error">
+						<a href="#" class="close-notification" title="Hide Notification" rel="tooltip">x</a>
+						<p><strong>Error notification:</strong> <%= params[:warning] %></p>
+					</div>
+				<% end %>
+	
+	
+					<div class="sidetab default-sidetab" id="sidetab1">
+							<h3>List of Project Images</h3>
+                            <p>
+                                <%= link_to "Create New", new_admin_project_image_path %>
+                            </p>
+							<table class="datatable">
+								<thead>
+									 <tr>
+                                        <th>
+                                            Image
+                                        </th>
+                                        <th>
+                                            Title
+                                        </th>
+										<th>
+											Tag
+										</th>
+                                        <th>
+                                            Created At
+                                        </th>
+										<th>
+                                            Is Published?
+                                        </th>
+                                        <th></th>
+                                    </tr>
+								</thead>
+								<tbody>
+									<% for project_image in @project_images %>
+									<tr class="gradeX">
+										<td><img src="/images/projectimages/<%= project_image.id %>/thumb/<%= project_image.image_file_name %>" width="150px"></td>
+										<td><%= project_image.title %></td>
+										<td><%= project_image.tag %></td>
+										<td><%= project_image.created_at.strftime("%m-%d-%Y") %></td>
+										<td>
+											<% if project_image.activate == true %>
+												<%= image_tag 'admin/img/icons/list-style/icon_list_style_checkmark.png' %>
+											<% else %>
+												<%= image_tag 'admin/img/icons/list-style/icon_list_style_cross.png' %>
+											<% end %>
+										</td>
+										<td><%= link_to "Edit", edit_admin_project_image_path(project_image) %> |
+                                        <%= link_to "Delete", admin_project_image_path(project_image), :confirm => 'Are you sure?', :method => :delete, :title => "Delete" %></td>
+										
+									</tr>
+									<% end %>
+									
+								</tbody>
+								<tfoot>
+									<tr>
+                                        <th>
+                                            Image
+                                        </th>
+                                        <th>
+                                            Title
+                                        </th>
+										<th>
+											Tag
+										</th>
+                                        <th>
+                                            Created At
+                                        </th>
+										<th>
+                                            Is Published?
+                                        </th>
+                                        <th></th>
+									</tr>
+								</tfoot>
+							</table>
+</div>
+</section>
+</div>
+</article>
+<% end %>

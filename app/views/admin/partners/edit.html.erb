@@ -1,0 +1,82 @@
+<% content_for :header_meta do%>
+<!-- // Meta //  -->
+<meta charset="utf-8">   
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<% end %>
+<% content_for :content do %>
+	<%= form_for(@partners, :as => :partners, :validate => true, :html => { :multipart => true }, :url => admin_partner_path(@partners)) do |f| %>
+	
+	   <fieldset>
+	        <legend><h2>Create Partner</h2></legend>
+
+	        <dl>
+				<dt>
+	                <label>Title</label>
+	            </dt>
+	            <dd>
+					<%= f.text_field :title, :class => 'small' %>  
+	            </dd>
+				<dt>
+	                <label>Description</label>
+	            </dt>
+	            <dd>
+					<%= f.text_area :description, :rows => 5, :cols => 40, :class => 'wysiwyg large' %>
+					<p>Short description of the banner</p>
+	            </dd>
+				<dt>
+	                <label>Url</label>
+	            </dt>
+	            <dd>
+					<%= f.text_field :url, :class => 'large' %>  
+	            </dd>
+				<dt>
+	                <label>Upload Partner Image</label>
+	            </dt>
+	            <dd>
+					<%= f.file_field :image, :class => 'fileupload customfile-input' %>
+	            </dd>
+	        </dl>
+		</fieldset>
+		<fieldset>
+		        <legend><h2>Settings</h2></legend>
+
+		        <dl>
+					<dt>
+		                <label>Tag</label>
+		            </dt>
+		            <dd>
+						<%= f.text_field :tag, :class => 'large' %>
+		            </dd>
+					<dt>
+		                <label>Publish Date</label>
+		            </dt>
+		            <dd>
+						<%= f.text_field :publish_date, :class => 'datepicker small'  %>
+		            </dd>
+					<dt>
+		                <label>Locale</label>
+		            </dt>
+		            <dd>
+						<% @collectionSet = Locale.all%>
+	                    <%= f.collection_select :locale, @collectionSet, :code, :name, {:include_blank => true}, {:class => 'select-1'} %>
+		            </dd>
+					<dt>
+		                <label>Is Published?</label>
+		            </dt>
+		            <dd>
+						<%= f.check_box :activate  %>
+		            </dd>
+		        </dl>
+	        <p>
+	            <button type="submit" value="Save">Submit</button> or <a href="/admin/<%= session[:current_page_name].downcase %>" title="Leave without saving" rel="tooltip">Cancel</a>
+	        </p>
+	        <br />
+
+	    </fieldset>
+	<% end %>
+	<div>
+	    <a href="/admin/<%= session[:current_page_name].downcase %>">Back to List</a>
+	</div>
+<% end %>

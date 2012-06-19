@@ -1,0 +1,7 @@
+<% if (@results != nil and @results.count > 0) or (@new_results != nil and @new_results.count > 0) or (@event_results != nil and @event_results.count > 0) or (@member_results != nil and @member_results.count > 0)%>
+	$("#results").html("<%= escape_javascript(render :partial => ("/search/results")) %>");
+	$("#results").css("border","1px #000 solid");
+<% else %>
+	$("#results").html("<%= escape_javascript(render :partial => ("/search/noresults")) %>");
+	$("#results").css("border","0px");
+<% end %>

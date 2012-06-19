@@ -1,0 +1,25 @@
+<% content_for :extra_include do %>
+
+<% end %>
+
+<% content_for :main_body do %>
+<div role="main" class="row">
+    	<div class="twelve columns">
+            <img src="<%= @main.banner.url(:original) %>" />
+        </div>
+</div>
+
+<div class="row">
+        <section class="executiveFeatures">
+			<article class="three columns posts">
+				<header class="headerExecutive">SEARCH JOBS</header>
+				<%= render 'opportunities/sidebar_links'%>
+			</article>
+			<article class="nine columns posts">
+				<% @industry = JobIndustry.where(:id => params[:industry_id]) %>
+				<header class="headerExecutive"><%= @industry[0].name.upcase %></header>
+				<%= render 'opportunities/job_posts'%>
+			</article>
+        </section>
+        </div>
+<% end %>

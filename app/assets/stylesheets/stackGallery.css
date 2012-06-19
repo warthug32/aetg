@@ -1,0 +1,197 @@
+
+
+a{ 
+	text-decoration: none; 
+}
+
+ul{
+	 list-style: none;
+}
+
+body {
+	
+}
+
+
+/* captions, adjust caption padding around text here 
+.caption {
+	position: absolute;
+	padding:5px 20px 5px 20px;
+}
+
+.caption a{
+	color:white;
+	text-decoration:underline;
+}
+
+.caption a:hover, a:active{
+  text-decoration:underline;
+}
+*/
+/* caption holder div, for mask */
+.infoHolder{
+	position:absolute;
+	overflow:hidden;
+}
+
+
+
+
+
+
+/* component holder */
+#sliderWrapper{
+	position:relative;
+	
+	/*background:#666;*/
+	width:600px;
+	height:900px;
+	
+	margin-left:480px;
+	
+	font-family: Geneva, sans-serif;
+	font-size: 30px;
+	
+}
+
+/* div holder for slide images, specify image border here */
+.imageHolder{
+	position:absolute;
+	width:370px;
+	height:270px;
+	background:#fff;
+	
+	-moz-box-shadow:5px 5px 5px #333;
+	-webkit-box-shadow:5px 5px 5px #333;
+	box-shadow:5px 5px 5px #333;
+	
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#333333')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#333333');
+	
+}
+
+/* slide image properties */
+.imageHolder img{
+	position:relative;
+	width:350px;
+	height:250px;
+	top:10px;
+	left:10px;
+}
+
+/* playlist holder (hidden) */
+#sliderImages{
+	display:none;
+}
+
+
+
+
+/* controls vertical right */
+#slideControls{
+	position:absolute;
+	width:35px;
+	height:105px;
+	top:100px;
+	left:590px;
+	display:none;
+}
+
+#slideControls #slide_prev{
+	position:relative;
+	width:33px;
+	height:33px;
+	display:block;
+	float:left;
+	
+	margin-bottom:2px;
+}
+
+
+#slideControls #slide_toggle{
+	position:relative;
+	width:33px;
+	height:33px;
+	cursor:pointer;
+	display:block;
+	float:left;
+	
+	margin-bottom:2px;
+}
+
+#pause_icon2{
+	position:absolute;
+	display:block;
+	height:33px;
+	overflow:hidden;
+}
+
+#pause_icon{
+	position:absolute;
+	display:block;
+}
+
+#pauseimg{
+	position:relative;
+	display:block;
+	width:33px;
+	height:33px;
+}
+
+#pause2img{
+	position:absolute;
+	display:block;
+	width:33px;
+	height:33px;
+}
+
+
+
+#play_icon2{
+	position:absolute;
+	display:block;
+	height:33px;
+	overflow:hidden;
+}
+
+#play_icon{
+	position:absolute;
+	display:block;
+}
+
+#playimg{
+	position:relative;
+	display:block;
+	width:33px;
+	height:33px;
+}
+
+#play2img{
+	position:absolute;
+	display:block;
+	width:33px;
+	height:33px;
+}
+
+
+
+#slideControls #slide_next{
+	position:relative;
+	width:33px;
+	height:33px;
+	display:block;
+	float:left;
+}
+
+
+
+
+
+/* div for measuring font face dimensions */
+#fontMeasure{
+	visibility:hidden;
+}
+
+

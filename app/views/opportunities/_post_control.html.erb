@@ -1,0 +1,25 @@
+<h6>Available Positions</h6>
+<table>
+	<tbody>
+		<tr>
+			<td style="width:180px;padding-left:10px;"><%= page_entries_info @job_posts %></td>
+			<!-- <td style="width:320px;text-align: center;">&lt; &lt;&nbsp;&nbsp;&lt; 1 2 3 4 5 6 &gt;&nbsp;&nbsp;&gt; &gt;</td> -->
+			<td style="width:320px;text-align: center;"><%= will_paginate @job_posts, :previous_label => '&lt;&lt;&nbsp;&nbsp;&lt;', :next_label => '&gt;&nbsp;&nbsp;&gt;&gt;' %></td>
+			<td style="width:40px;text-align: right;">Sort by</td>
+			<td style="text-align: right;">
+			<form action="/opportunities" method="post" style="height: 10px;padding:0;margin: 0;">
+			<input type="hidden" id="industry_id" name="industry" value="<%= @industry_id %>" />
+			<% if @posts.count > 1%>
+			<select name="sortby" id="customDropdown">
+			<% else %>
+			<select name="sortby" id="customDropdown" disabled="true">
+			<% end %>
+					<option value="created_at">Date</option>
+					<option value="position">Position</option>
+					<option value="location">Location</option>
+				</select>
+			</form>
+			</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,86 @@
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Login | THE ADVITOR CMS SYSTEM</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" href="../../favicon.ico">
+	<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+	
+	<!-- CSS Styles -->
+	<%= stylesheet_link_tag 'admin/css/style.css' %>
+	<%= stylesheet_link_tag 'admin/css/colors.css' %>
+	<%= stylesheet_link_tag 'admin/css/jquery.tipsy.css' %>
+
+	<%= javascript_include_tag 'admin/js/libs/modernizr-1.7.min.js' %>
+</head>
+<body class="login">
+	<section role="main">
+	
+		<a href="/" title="Back to Homepage"></a>
+	
+		<!-- Login box -->
+		<article id="login-box">
+		
+			<div class="article-container">
+			
+				<p>Welcome to THE ADVITOR CMS System <br/>Please use your admin account to login </p>
+				
+				<!-- Notification -->
+				<% if flash[:error] %>
+				<div class="notification error">
+					<a href="#" class="close-notification" title="Hide Notification" rel="tooltip">x</a>
+					<p><strong>Error notification</strong> <%= raw flash[:error] %></p>
+				</div>
+				<% end %>
+				<!-- /Notification -->
+				<%= @user %>
+				<%= form_tag( {:action => :login} ) %>
+					<fieldset>
+						<dl>
+							<dt>
+								<label>Login</label>
+							</dt>
+							<dd>
+								<input type="text" id="username" value="" name="Username" class="large" />
+							</dd>
+							<dt>
+								<label>Password</label>
+							</dt>
+							<dd>
+								<input type="password" id="password" value="" name="Password" class="large" />
+							</dd>
+							<dt class="checkbox"><label>Remember me</label></dt>
+							<dd><input type="checkbox" name="remember_me" id="field-remember" /></dd>
+						</dl>
+					</fieldset>
+					<button type="submit" class="right">Log in</button>
+				</form>
+			
+			</div>
+		
+		</article>
+		<!-- /Login box -->
+		<ul class="login-links">
+			<li><a href="http://advitor.com">Back to page</a></li>
+		</ul>
+		
+	</section>
+
+	<!-- JS Libs at the end for faster loading -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
+	<%= javascript_include_tag 'admin/js/libs/selectivizr.js' %>
+	<%= javascript_include_tag 'admin/js/jquery/jquery.tipsy.js' %>
+	<%= javascript_include_tag 'admin/js/script.js' %>
+
+
+</body>
+</html>
+<!-- Localized -->

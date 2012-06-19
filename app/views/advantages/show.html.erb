@@ -1,0 +1,82 @@
+<% content_for :extra_include do %>
+
+<% end %>
+
+<% content_for :main_body do %>
+<div role="main" class="row">
+    	<div class="twelve columns">
+            <img src="<%= @main.banner.url(:original) %>" />
+        </div>
+</div>
+<div class="row">
+        <section class="advantagesFeatures">
+			<article class="three columns <%= @page_url %>">
+				<header class="headerAdvantages"><%= @main.page_title.upcase %></header>
+				<ul class="sidebar_links">
+						<% for n in @main.pages.order("display_order") %>
+							<% unless n.pages.count > 0 %>
+								<li>
+									<a href="/our_advantages/<%= n.page_url %>"><%= n.page_title %></a>
+								</li>
+							<% end %>
+						<% end %>
+				</ul>
+			</article>
+			<article class="nine columns <%= @page_url %>">
+				<header class="headerAdvantages"><%= @current_page.page_title.upcase %></header>
+				<div class="content_holder">
+					
+					<% if @page_url == 'experienced' or @page_url == 'effective' %>
+						<% unless @current_page.body.nil? || @current_page.body.blank? %>
+							<%= raw @current_page.body %>
+						<% end %>
+					<% end %>
+					
+					<% if @page_url == 'scientific' %>
+						<% unless @current_page.content_images.nil? %>
+							<div class="row">
+								<p>
+									<% @current_page.content_images.each do |c| %>
+										<img src="<%= c.content_image.url(:original) %>"/>
+									<% end %>
+								</p>
+							</div>
+						<% end %>
+						<% unless @current_page.body.nil? || @current_page.body.blank? %>
+							<div class="row">
+								<%= raw @current_page.body %>
+							</div>
+						<% end %>
+						
+					<% end %>
+					
+					<% if @page_url == 'process' %>
+						<% unless @current_page.body.nil? || @current_page.body.blank? %>
+								<%= raw @current_page.body %>
+						<% end %>
+						
+						<% unless @current_page.content_images.nil? %>
+								<% @current_page.content_images.each do |c| %>
+									<p><img src="<%= c.content_image.url(:original) %>"/></p>
+								<% end %>
+						<% end %>
+					<% end %>
+					
+					<% if @page_url == 'web' %>
+						<% unless @current_page.body.nil? || @current_page.body.blank? %>
+								<%= raw @current_page.body %>
+						<% end %>
+						
+						<% unless @current_page.content_images.nil? %>
+								<% @current_page.content_images.each do |c| %>
+									<div class="six columns">
+			  							<p><img src="<%= c.content_image.url(:original) %>"/></p>
+			  						</div>
+		  						<% end %>
+						<% end %>
+					<% end %>
+					
+			</article>
+        </section>
+</div>
+<% end %>

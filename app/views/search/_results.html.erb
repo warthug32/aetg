@@ -1,0 +1,68 @@
+
+<% if @results != nil  and @results.count > 0%>
+
+	<div class="search-result-header">Articles
+	</div>
+	<% for r in @results%>
+	<a href="/publications/<%= r.id %>/<%= r.browser_url %>">
+		<div class="search-result-block">
+			<div class="search-result-block-image left">
+				<img src="<%= r.cover.url(:thumb)%>" height="40px" />
+			</div>
+			<div class="search-result-title-block left">	
+				<%= r.title[0..75] << "..." %>
+			</div>
+		</div>
+	</a>
+	<% end %>
+
+<% end %>
+<% if @news_results != nil  and @news_results.count > 0%>
+
+	<div class="search-result-header">News
+	</div>
+	<% for r in @news_results%>
+	<a href="/news/<%= r.id %>/<%= r.browser_url %>">
+		<div class="search-result-block">
+			
+			<div class="search-result-title-block left" >	
+				<%= r.title[0..75] << "..." %>
+			</div>
+		</div>
+	</a>
+	<% end %>
+
+<% end %>
+<% if @event_results != nil  and @event_results.count > 0%>
+
+	<div class="search-result-header">Event
+	</div>
+	<% for r in @event_results%>
+	<a href="/events/<%= r.id %>/<%= r.browser_url %>">
+		<div class="search-result-block">
+			<div class="search-result-block-image left">
+				<img src="<%= r.cover.url(:thumb)%>" height="40px" />
+			</div>
+			<div class="search-result-title-block left">	
+				<%= r.title[0..75] << "..." %>
+			</div>
+		</div>
+	</a>
+	<% end %>
+
+<% end %>
+<% if @member_results != nil and @member_results.count > 0%>
+
+	<div class="search-result-header">Organization
+	</div>
+	<% for r in @member_results%>
+	<a href="/">
+		<div class="search-result-block">
+			<div class="search-result-title-block left">	
+				<%= r.organization_name[0..75] << "..." %>
+			</div>
+		</div>
+	</a>
+	<% end %>
+
+<% end %>

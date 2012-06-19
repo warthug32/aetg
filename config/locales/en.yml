@@ -1,0 +1,24 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  home_sitemap: "HOME"
+  executive_opportunities: "EXECUTIVE OPPORTUNITIES"
+  no_available: "No available job!"
+  corporate_case: "CORPORATE CASE STUDIES"
+  partners: "PARTNERS"
+  job_description: "Job Description"
+  requirements: "Requirements"
+  will_paginate:
+    page_entries_info:
+      single_page:
+        zero:  "No job post"
+        one:   "Display 1 post"
+        other: "Display all %{count} posts"
+      single_page_html:
+        zero:  "No post found"
+        one:   "Display <b>1</b> post"
+        other: "Display <b>all&nbsp;%{count}</b> posts"
+
+      multi_page: "Display %{from} to %{to} of %{count} posts"
+      multi_page_html: "Displaying <b>%{from}</b>&nbsp;to&nbsp;<b>%{to}</b> of <b>%{count}</b> posts"

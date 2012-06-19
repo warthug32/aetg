@@ -1,0 +1,243 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title><%= @title %> AETG</title>
+	<meta name="description" content="<%= @meta.meta_description %>" />
+	<meta name="keywords" content="<%= @meta.meta_keywords %>" />
+	<meta name="author" content="<%= @meta.meta_author %>" />
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+	<%= csrf_meta_tag %>	
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
+
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+  <%= stylesheet_link_tag 'app.css' %>
+  <%= stylesheet_link_tag 'foundation.css' %>
+  <%= stylesheet_link_tag 'sliderstyle.css' %>
+  <%= stylesheet_link_tag 'gmaps4rails'%>
+  <%= stylesheet_link_tag 'humanity/jquery-ui-1.8.18.custom.css' %>
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+
+  <!-- All JavaScript at the bottom, except this Modernizr build.
+       Modernizr enables HTML5 elements & feature detects for optimal performance.
+       Create your own custom Modernizr build: www.modernizr.com/download/ -->
+	<%= javascript_include_tag 'application' %>
+	
+	<%= yield(:extra_include)%>
+	  <!-- JavaScript at the bottom for fast page loading -->
+
+	
+
+  <!-- scripts concatenated and minified via build script -->
+  <%= javascript_include_tag 'plugins' %>
+  <%= javascript_include_tag 'jquery.easing' %>
+  
+  
+  <!-- <%#= javascript_include_tag 'sliderscript' %> -->
+
+  <!-- <%#= javascript_include_tag 'jquery.watermarkinput' %> -->
+  <!-- <%#= javascript_include_tag 'script' %> -->
+  <!-- end scripts -->
+	<%= yield :head %> 
+	
+<script type="text/javascript">
+ 	function searchbox_focus(search_val){
+		var element = document.getElementById("search_keyword");
+
+        if ( element.value.length == 0 )
+        {
+            element.value = 'keywords';
+            element.className = 'form-text';
+        }
+        else
+        {
+            element.className = 'focused';
+        }
+	}
+        
+</script>
+
+</head>
+<body>
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  		<% if notice.to_s != '' %>
+  		<div class="alert-box">
+			<%= notice %>
+			<a href="" class="close">&times;</a>
+		</div>
+		<% end %>
+		<% if alert.to_s != '' %>
+		<div class="alert-box warning">
+			<%= alert %>
+			<a href="" class="close">&times;</a>
+		</div>
+		<% end %>
+
+	<!-- container -->
+	
+		
+		
+		<div class="container">
+		<div class="row">
+			<header class="twelve columns">
+            	<div class="row">
+                	<div class="eight columns">
+                		<a href="/"><%= image_tag "frontend/logo.jpg" %></a>
+                    	<!-- <img src="images/frontend/logo.jpg" /> -->
+                    </div>
+                    <div class="four columns">
+                    	<div class="user_options">
+                    		<div style="position: relative;">
+							<%= render 'members/menu/login_items' %>&nbsp;&nbsp;|
+							<%= render 'members/menu/registration_items' %>
+							<span class="lang"><a href="/cn">中</a>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/en">ENG</a></span>
+								<div class="search_area">
+									<span style="">SEARCH</span>&nbsp;&nbsp;
+										<form style="" method="get" name="searchform" target="_blank">
+											<input id="search_keyword" class="form-text" title="Enter your search keywords here" type="text" value="keywords" onblur="searchbox_focus()" onfocus="this.value=''; this.className = 'focused';" >
+											<%= image_tag "frontend/search.png" %>
+											
+										</form>
+								</div>
+							<br/>
+						</div>
+                    	<!-- <img src="images/login.png" /> -->
+                    </div>
+                </div>
+			</header>
+		</div>
+        
+      	<div class="row">
+        <nav class="twelve columns <%= I18n.locale %>">
+    		<ul>
+    			<% for n in @allpages%>
+					<% if n.show_in_menu and n.page_id == nil %>
+						<li><a href="/<%= n.page_url %>" class="<%= n.page_url %>"><%= n.page_title.upcase %></a></li>
+					<% end %>
+				<% end %>
+      		</ul>
+        </nav>
+  		</div>
+        <br/>
+        
+        <%= yield(:main_body) %>
+       	
+        
+        <div class="row">
+        	<hr class="border" />
+			<hr class="thin_border" />
+         </div>
+         
+         <div class="row">
+         	<section class="sitemap">
+            <article class="four columns">
+            	<header>COMPANY INFO</header>
+                <ul>
+                <li><a href="/"><%= t :home_sitemap %></a></li>
+                <% for n in @allpages %>
+					<% if n.show_in_menu and n.page_id == nil %>
+						<li><a href="/<%= n.page_url %>"><%= n.page_title.upcase %></a></li>
+					<% end %>
+				<% end %>
+                </ul>
+            </article>
+            <article class="four columns">
+            	<header>QUICK LINKS</header>
+                <ul>
+                	<li><a href="#">SUBMIT CV</a></li>
+                </ul>
+            </article>
+            <article class="four columns">
+            	<header>FOLLOW US<br />
+                <div id="social" class="row">
+                    	<a href="http://www.linkedin.com/" target="blank"><%= image_tag "frontend/linkedin.png" %></a>
+                        
+                 </div>
+				</header>
+                <div class="row">
+                	<p>UNIT 2307-10, DAH SING FINANCIAL CENTRE,
+108 GLOUCESTER ROAD, HONG KONG</p>
+<p>EMAIL: <a href="mailto:info@asia-executives.com">INFO@ASIA-EXECUTIVES.COM</a></p>
+                </div>
+            </article>
+            </section>
+         </div>
+         
+         <div class="row">
+       	   <footer><p>&copy; Copyright 2012 Asia Executive Talents Group Limited.</p></footer>
+         </div>
+
+	</div>
+	<!-- container -->
+
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.1.min.js"><\/script>')</script>
+	<!-- Included JS Files -->
+	
+	<%= javascript_include_tag 'modernizr.foundation.js' %>
+	<%= javascript_include_tag 'foundation.js' %>
+	<%= javascript_include_tag 'app.js' %>
+	
+	
+	
+	<!-- <script src="javascripts/jquery.min.js"></script>
+	<script src="javascripts/modernizr.foundation.js"></script>
+	<script src="javascripts/foundation.js"></script>
+	<script src="javascripts/app.js"></script> -->
+
+	<script>
+	// Gmaps.map.infobox = function(boxText) {
+	  // return {
+	     // content: boxText
+	    // ,disableAutoPan: false
+	    // ,maxWidth: 0
+	    // ,pixelOffset: new google.maps.Size(-140, 0)
+	    // ,zIndex: null
+	    // ,boxStyle: { 
+	      // background: "#fff"
+	      // ,opacity: 1
+	      // ,width: "280px"
+	       // }
+	    // ,closeBoxMargin: "2px 2px 2px 2px"
+	    // ,closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif"
+	    // ,infoBoxClearance: new google.maps.Size(1, 1)
+	    // ,isHidden: false
+	    // ,pane: "floatPane"
+	    // ,enableEventPropagation: false
+	 // }};
+	</script>
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<ul class="industry_links">
+	<% @industry.each do |industry| %>
+	<li>
+		<a href="/opportunities?industry_id=<%= industry.id %>" alt="<%= industry.name %>" id="<%= industry.id %>"><%= industry.name %></a>
+	</li>
+	<% end %>
+</ul>

@@ -1,0 +1,95 @@
+<% content_for :header_meta do%>
+<!-- // Meta //  -->
+<meta charset="utf-8">   
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<% end %>
+<% content_for :content do %>
+	<%= form_for(@content_images, :as => :content_images, :validate => true, :html => { :multipart => true }, :url => admin_content_images_path) do |f| %>
+	
+	   <fieldset>
+	        <legend><h2>Create Content Image</h2></legend>
+
+	        <dl>
+				<dt>
+	                <label>Title</label>
+	            </dt>
+	            <dd>
+					<%= f.text_field :title, :class => 'small' %>  
+	            </dd>
+				<dt>
+	                <label>Description</label>
+	            </dt>
+	            <dd>
+					<%= f.text_area :description, :rows => 5, :cols => 40, :class => 'wysiwyg large' %>
+					<p>Short description of the content image</p>
+	            </dd>
+	            <dt>
+	                <label>Simple Content</label>
+	            </dt>
+	            <dd>
+					<%= f.cktext_area :content, :width => '80%' %>
+	            </dd>
+				<dt>
+	                <label>Upload Content Image</label>
+	            </dt>
+	            <dd>
+					<%= f.file_field :content_image, :class => 'fileupload customfile-input' %>
+	            </dd>
+	            <dt>
+	                <label>Url Link</label>
+	            </dt>
+	            <dd>
+					<%= f.text_field :url, :class => 'small' %>  
+	            </dd>
+	        </dl>
+		</fieldset>
+		<fieldset>
+		        <legend><h2>Settings</h2></legend>
+
+		        <dl>
+					<dt>
+		                <label>Publish Date</label>
+		            </dt>
+		            <dd>
+						<%= f.text_field :publish_date, :class => 'datepicker small'  %>
+		            </dd>
+		            <dt>
+		                <label>Parent</label>
+		            </dt>
+		            <dd>
+						<% @pageSet = Page.all%>
+	                    <%= f.collection_select :page_id, @pageSet, :id, :page_title, {:include_blank => true}, {:class => 'select-1'} %>
+		            </dd>
+		            <dt>
+		                <label>Display Order</label>
+		            </dt>
+		            <dd>
+						<%= f.text_field :display_order, :class => 'small' %>  
+		            </dd>
+					<dt>
+		                <label>Locale</label>
+		            </dt>
+		            <dd>
+						<% @collectionSet = Locale.all%>
+	                    <%= f.collection_select :locale, @collectionSet, :code, :name, {:include_blank => true}, {:class => 'select-1'} %>
+		            </dd>
+		            <dt>
+		                <label>Is Published?</label>
+		            </dt>
+		            <dd>
+						<%= f.check_box :activate  %>
+		            </dd>
+		        </dl>
+	        <p>
+	            <button type="submit" value="Save">Submit</button> or <a href="/admin/<%= session[:current_page_name].downcase %>" title="Leave without saving" rel="tooltip">Cancel</a>
+	        </p>
+	        <br />
+
+	    </fieldset>
+	<% end %>
+	<div>
+	    <a href="/admin/<%= session[:current_page_name].downcase %>">Back to List</a>
+	</div>
+<% end %>

@@ -1,0 +1,30 @@
+<% content_for :extra_include do %>
+
+<% end %>
+
+<% content_for :main_body do %>
+<div role="main" class="row">
+    	<div class="twelve columns">
+            <img src="<%= @main.banner.url(:original) %>" />
+        </div>
+</div>
+<div class="row">
+        <section class="aboutFeatures">
+			<article class="two columns <%= @page_url %>">
+				<header class="headeraboutBorder"><%= @main.page_title.upcase %></header>
+				<ul class="sidebar_links">
+					<%= render :partial => ("/about_us/sidebar_links") %>
+				</ul>
+			</article>
+			<article class="ten columns <%= @page_url %>">
+				<header class="headeraboutBorder"><%= @current_page.page_title.upcase %></header>
+				<% unless @current_page.body.nil? || @current_page.body.blank? %>
+					<%= raw @current_page.body %>
+				<% end %>
+				<% unless @current_page.banner_file_name.nil? || @current_page.banner_file_name.blank? %>
+					<img src="<%= @current_page.banner.url(:original) %>" />
+				<% end %>
+			</article>
+        </section>
+</div>
+<% end %>

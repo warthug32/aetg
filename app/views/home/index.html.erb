@@ -1,0 +1,69 @@
+<% content_for :extra_include do %>
+
+<% end %>
+
+<% content_for :main_body do %>
+
+
+ 		<div role="main" class="row">
+        	<div class="twelve columns">
+            	<!-- <img src="../public/images/banners/1/original/banner.jpg" /> -->
+            	<% unless @main.banner.url(:original).nil? %>
+            	<img src="<%= @main.banner.url(:original) %>" />
+            	<% end %>
+            </div>
+        </div>
+		<div class="row">
+        	<section class="features">
+	            <article class="four columns">
+	            	<header class="headerBorder <%= I18n.locale %>">AETG</header>
+	            	<div class="body_content">
+	                <%= raw @main.body %>
+	                </div>
+	                
+	            </article>
+	            <article class="four columns">
+	            	<header class="headerBorder <%= I18n.locale %>"><%= t :executive_opportunities %></header>
+	                <table class="tableEO">
+	                	<% unless @job_posts.empty? || @job_posts.nil? %>
+	                		<% @job_posts.each do |post| %>
+	                		<tr>
+								<td><%= truncate(post[:name], :length => 11 ) %></td>
+			                    <td class="td_date"><%= post[:created] %></td>
+			                </tr>
+			                <% end %>
+		                <% else %>
+		                	<div class="panel" style="height:40px;">
+		                	<p style="text-align: left;margin-top: 20px;font-weight: bold;font-size:16px;color:#00235d;">No available positions!</p>
+		                	</div>
+		                <% end %>
+	                </table>
+	                
+	            </article>
+	            <article class="four columns" id="partners">
+	            	<header class="headerBorder <%= I18n.locale %>"><%= t :partners %></header>
+	                <table class="tablePa">
+                		<% @partners.each_with_index do |partner, index| %>
+            		 		<% if index % 2 == 0 %>
+            		 			<tr>
+            		 				<td class="col1">
+            		 					<a href="<%= partner.url %>" target="_blank">
+            		 						<img src="<%= partner.image.url(:original) %>" title="<%= partner.title %>" />
+    		 							</a>
+		 							</td>
+        		 			<% else %>
+	        		 				<td class="col2">
+	        		 					<a href="<%= partner.url %>" target="_blank">
+	        		 						<img src="<%= partner.image.url(:original) %>" title="<%= partner.title %>"  />
+        		 						</a>
+    		 						</td>
+        		 				</tr>
+            		 		<% end %>
+            		 	<% end %>	
+	                </tr>
+	                </table>
+	            </article>
+            </section>
+		</div>
+		
+<% end %>

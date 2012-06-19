@@ -1,0 +1,50 @@
+/* 
+    Document   : FlexSlider
+    Created on : 31 août 2011, 12:54:46
+    Author     : Huitre
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* flexslider main css */
+
+/* pre loader */
+#preloader {width:100%; height:100%; position: absolute; z-index: 9999; text-align: center; background-color : #fff}
+#preloader .content_preloader {width:100px; height: 50px; margin:auto; margin-top: 30px;}
+#preloader .square {height: 10px; width: 10px; margin: 3px; border: 1px solid #d4d4d4; float: left; background-color : #ff0000}
+
+/* visual timer */
+.visualTimer {visibility:hidden; height: 15px; position: absolute; z-index: 9999; bottom: 60px; left: 10px; width: 55px !important;}
+.visualTimer .content_preloader {width:100px; height: 15px; margin:auto; margin-top: 5px;}
+.visualTimer .square {height: 10px; width: 10px; margin: 0px; float: left; background-color : #c13}
+
+/* main div */
+.slider {cursor: move; cursor: w-resize; background-color: #F3F2F0; width: 100%; margin-left: 15px; position: relative; overflow: hidden; height: 100%; margin : 0 auto; background: url('../assets/bg.png');}
+.slider .wrapper { margin: 0 auto; position:relative; overflow: hidden; width: 100%;}
+
+/* panels */
+.slider .rotator { position: relative; width:100%; float: left; overflow: hidden; margin:0 auto; }
+.slider .rotator img {position: relative;}
+.slider .rotator div {position: relative;}
+.slider .rotator .fullsize {width: 100%; height: 100%; position : absolute;}
+/* controls buttons */
+.controls {margin : auto; text-align: center; z-index: 99; position: absolute; margin-left: 50%; bottom:10%;}
+.controls a {-webkit-box-shadow: 1px 1px 1px rgba(0,0,0, 0.7); -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7); box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);display: inline-block; text-decoration: none; color:#fff; margin: 4px; background-color: #d9d9d9; width: 11px; border-radius : 50px 50px 50px 50px; height: 11px; border: 2px solid #d9d9d9}
+.controls a:hover { background: #ffd400; border: 2px solid #ffd400; }
+.controls a.active { background: #ffd400; border: 2px solid #ffd400;}
+.controls .next {visibility:hidden; display:none; position:absolute; margin-top: -240px; width: 25px; height: 25px; background-color: #000; opacity : 0.7; margin-left: 954px; padding-top: 2px; color: #fff; z-index:1}
+.controls .prev {visibility:hidden;display:none; position:absolute; margin-top: -240px; width: 25px; height: 25px; background-color: #000; opacity : 0.7; padding-top: 2px;color: #fff; z-index: 1}
+.slider:hover .next {display: block !important}
+.slider:hover .prev {display: block !important}
+/* IE specific */
+.controls .IE7.prev {margin-left: -100px;}
+.controls .IE7.next {margin-left: 828px;}
+/* caption */
+.caption {font-family: "Century Gothic"; position:relative; width:45%; background-color: #ffd400; opacity : 0.7; color: #fff; text-align:right; padding : 20px; height: 180px; filter: alpha(opacity = 70);}
+.caption-title {font-weight:bold; font-size:56px; line-height:70px;}
+.caption-subtitle {font-size:56px;}
+.caption-line1 {font-size:30px;}
+.caption-line2 {font-size:20px;}
+.view-more{font: "Century Gothic" bold; font-size:20px; position:relative; width:40%;  opacity : 0.7; color: #ffd400; text-align:left; height: 60px; filter: alpha(opacity = 70);float:right;}
+.view-more a {color:#ffd400;}
+.view-more hr{color:#ffd400;border:0; height:4px; background-color:#ffd400;margin-bottom:0px;}

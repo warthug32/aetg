@@ -1,0 +1,76 @@
+<% content_for :extra_include do %>
+
+<% end %>
+
+<% content_for :main_body do %>
+<div role="main" class="row">
+    	<div class="twelve columns">
+            <img src="<%= @main.banner.url(:original) %>" />
+        </div>
+</div>
+
+<div class="row">
+        <section class="executiveFeatures">
+			<article class="three columns job_post">
+				<header class="headerExecutive">SEARCH JOBS</header>
+				<%= render 'opportunities/sidebar_links'%>
+			</article>
+			<article class="nine columns job_post">
+				<% @classification = JobClassification.where(:id => @post.job_classification_id) %>
+				<header class="headerExecutive"><%= @classification[0].name %></header>
+				<div class="jobposts_container">
+					<div class="job_details">
+						<div class="job_info">
+							<table>
+								<tbody>
+									<tr>	
+										<td style="width:150px;"><strong>Location:&nbsp;</strong> <%= @post.location %></td>
+										<td style="width:100px;"><strong>Date:&nbsp;</strong> <%= @post.created_at.strftime("%d/%m/%y") %></td>
+										<% @worktype = WorkType.where(:id => @post.work_type).limit(1).first %>
+										<td style="width:150px;"><strong>Work Type:&nbsp;</strong> <%= @worktype.name %></td>
+										<td><strong>Salary:&nbsp;</strong> <%= number_to_currency(@post.salary1, :precision => 0) %>&nbsp;
+											<% unless @post.salary2.nil? %> 
+											&ndash;&nbsp;<%= number_to_currency(@post.salary2, :precision => 0) %>&nbsp;
+											<% end %>
+											HKD/ANNUM
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<% @classification = JobClassification.where(:id => @post.job_classification_id) %>
+							<p class="classification"><strong>Classification:&nbsp;</strong> <span><%= @classification[0].name %></span></p>
+						</div>
+						<div class="job_description" id="<%= @post.id %>">
+							<p class="position"><%= @post.position%></p>
+							<div class="company_info">
+								<% @company = Company.where(:id => @post.company_id).limit(1).first %>
+								<p class="header"><%= @company.name %></p>
+								<div class="company">
+									<%= raw(@company.description) %>
+								</div>
+							</div>
+							<div class="company_info">
+								<p class="header"><%= t :job_desription %></p>
+								<div class="company">
+									<%= raw(@post.description) %>
+								</div>
+							</div>
+							<div class="company_info">
+								<p class="header"><%= t :requirements %></p>
+								<div class="company">
+									<%= raw(@post.requirements) %>
+								</div>
+							</div>	
+						</div>
+						
+					</div>
+					<div class="button_holder">
+						<a id="apply_job" class="button small">APPLY</a>
+					</div>
+		
+				</div>
+				 
+ 			</article>
+        </section>
+        </div>
+<% end %>

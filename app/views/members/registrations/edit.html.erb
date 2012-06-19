@@ -1,0 +1,72 @@
+<% content_for :main_body do %>
+<div class="page-title">
+<h1>Edit an account</h1>
+</div>
+
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+<fieldset>
+	<hr class="dot"/>
+	<table class="tablestyle">
+		<table style="border:none;margin-left: 30%;">
+		<tr><td style="vertical-align: baseline;line-height: 40px;font-weight:bold;">First name</td>
+			<td><%= f.text_field :first_name, :class => 'input-text' %></td>
+		</tr>
+		<tr><td style="vertical-align: baseline;line-height: 40px;font-weight:bold;">Last name</td>
+			<td><%= f.text_field :last_name, :class => 'input-text' %></td>
+		</tr>
+		
+		<tr>
+			<td style="vertical-align: baseline;line-height: 40px;font-weight:bold;">Email</td><td><%= f.email_field :email, :class => 'input-text' %></td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><%= f.text_field :address, :class => 'input-text' %></td>
+		</tr>
+		<tr>
+			<td>Country</td>
+			<td><%= country_select(resource_name, :country) %></td>
+		</tr>
+		<tr>
+			<td><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i></td><td><%= f.password_field :current_password, :class => 'input-text' %></td>
+		</tr>
+		<tr>
+			<td style="vertical-align: baseline;line-height: 40px;font-weight:bold;">Password</td><td><%= f.password_field :password, :class => 'input-text' %></td>
+		</tr>
+		<tr>
+			<td style="vertical-align: baseline;line-height: 40px;font-weight:bold;">Confirm Password</td><td><%= f.password_field :password_confirmation, :class => 'input-text' %></td>
+		</tr>
+		
+	</table>
+</fieldset>
+<fieldset>
+		<table class="tablestyle">
+			<tbody>
+				<tr>
+					<td>Update Resume<td>
+            		<td><%= f.file_field :resume, :class => 'fileupload customfile-input' %></td>
+	            </tr>
+	            <tr>
+					<td>Update Cover Letter<td>
+            		<td><%= f.file_field :cv, :class => 'fileupload customfile-input' %></td>
+	            </tr>
+			</tbody>
+			
+		</table>
+</fieldset>
+
+
+  <div><%= f.submit "Update" %></div>
+<% end %>
+
+
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>
+
+<%= link_to "Back", :back %>
+
+<% end %>

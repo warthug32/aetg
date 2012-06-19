@@ -1,0 +1,48 @@
+<% content_for :extra_include do %>
+
+<% end %>
+
+<% content_for :main_body do %>
+<div role="main" class="row">
+    	<div class="twelve columns">
+            <img src="<%= @main.banner.url(:original) %>" />
+        </div>
+</div>
+<div class="row">
+        <section class="teamFeatures">
+        	<article class="two columns">
+				<header class="headerTeamBorder">OUR TEAM</header>
+            	<ul class="sidebar_links">
+					<% @teams.each do |member| %>
+						<li><a href="/our_team/<%= member.page_url %>"><%= member.first_name.capitalize %> <%= member.last_name.capitalize %></a></li>
+					<% end %>
+				</ul>
+			</article>
+			<article class="seven columns" id="member_container">
+				<header class="headerTeamBorder"><%= @title.upcase %></header>
+				<div class="member_container">
+					<% unless @main.body.nil? || @main.body.blank? %>
+						<%= raw @main.body %>
+					<% end %>
+					<% @teams.each do |member| %>
+						<div class="row">
+				          <div id="teamImg" class="two columns">
+				            	<a href="/our_team/<%= member.page_url %>"><img src="<%= member.cover.url(:original) %>" /></a>
+						  </div>
+				            <div id="teamContact">
+				                <a href="/our_team/<%= member.page_url %>"><header><%= member.first_name.capitalize %> <%= member.last_name.capitalize %></header></a>
+				                <p class="member_title"><%= member.position %></p>
+								<p class="member_email"><a href="mailto:<%= member.email %>"><%= member.email %></a></p>
+				            </div>
+				        </div>
+					<% end %>
+				</div>
+			</article>
+			<article class="three columns links">
+        	<header class="headerTeamBorder">LINKS</header>
+				<!-- <p>Link to email <a href="#">our leader</a><br />
+            	Link to <a href="#">discussion</a></p> -->
+        	</article>
+        </section>
+</div>
+<% end %>

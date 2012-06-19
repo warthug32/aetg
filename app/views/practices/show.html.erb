@@ -1,0 +1,54 @@
+<% content_for :extra_include do %>
+
+<% end %>
+
+<% content_for :main_body do %>
+	<div role="main" class="row">
+	    	<div class="twelve columns">
+	            <img src="<%= @main.banner.url(:original) %>" />
+	        </div>
+	</div>
+
+	<div class="row">
+        <section class="practicesFeatures">
+			<article class="two columns <%= @class %>">
+				<header class="headerPractices">OUR PRACTICES</header>
+					<section class="">
+						<article>
+							<header>INDUSTRY PRACTICE</header>
+								<ul class="sidebar_links">
+									<% @industry_practices.each do |industry| %>
+										<li><a href="/our_practices/<%= industry.page_url %>"><%= industry.page_title %></a></li>
+									<% end %>						
+								</ul>
+						</article>
+						<article>
+							<header>FUNCTIONAL PRACTICE</header>
+						</article>
+					</section>
+			</article>
+			<article class="practices_content <%= @class %>">
+				<header class="headerPractices"><%= @current_page.page_title.upcase %></header>
+				<section class="content_body">
+					<%= raw(@current_page.body) %>
+				</section>
+				<section id="practices_img" style="">
+					<% unless @current_page.content_images.nil? %>
+						<% @current_page.content_images.each do |c| %>
+							<div class="row">
+								<p><img src="<%= c.content_image.url(:original) %>"/></p>
+							</div>
+						<% end %>
+					<% end %>
+				</section>
+			</article>
+			<article class="practices_links <%= @class %>">
+				<header class="headerPractices" style="">LINKS</header>
+				<ul>
+					<li>Link to <a href="#">submit CV</a></li>
+					<li></li>
+				</ul>
+			</article>
+		</section>
+	</div>
+<% end %>

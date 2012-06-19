@@ -1,0 +1,230 @@
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<title><%= @title %> | THE ADVITOR CMS SYSTEM</title>
+	
+	<%= yield(:header_meta)%>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<%= csrf_meta_tag %>
+	
+	<%= javascript_include_tag 'application' %>
+	
+	<link rel="shortcut icon" href="../../favicon.ico">
+	<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+	
+	<!-- CSS Styles -->
+	<%= stylesheet_link_tag 'admin/css/style.css' %>
+	<%= stylesheet_link_tag 'admin/css/colors.css' %>
+	<%= stylesheet_link_tag 'admin/css/jquery.tipsy.css' %>
+	<%= stylesheet_link_tag 'admin/css/jquery.wysiwyg.css' %>
+	<%= stylesheet_link_tag 'admin/css/jquery.datatables.css' %>
+	<%= stylesheet_link_tag 'admin/css/jquery.facebox.css' %>
+	<%= stylesheet_link_tag 'admin/css/jquery.datepicker.css' %>
+	<%= stylesheet_link_tag 'admin/css/jquery.fileinput.css' %>
+	<%= stylesheet_link_tag 'admin/css/jquery.fullcalendar.css' %>
+	<%= stylesheet_link_tag 'admin/css/jquery.visualize.css' %>
+
+	<!-- Google WebFonts -->
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+	
+	<%= javascript_include_tag 'admin/js/libs/modernizr-1.7.min.js' %>
+	
+</head>
+<body>
+	<!-- Aside Block -->
+	<section role="navigation">
+		<!-- Header with logo and headline -->
+		<header>
+			<a href="/" title="Back to Homepage"></a>
+			<h1>THE ADVITOR CMS SYSTEM</h1>
+		</header>
+		
+		<!-- User Info -->
+		<section id="user-info">
+			<%= image_tag "admin/img/sample_user.png" %>
+			<div>
+				<a href="#" title="Account Settings and Profile Page"><%= session[:admin_username] %></a>
+				<em><%= session[:admin_role] %></em>
+				<ul>
+					<li><a class="button-link" href="/" title="Go back to client view!" rel="tooltip">view website</a></li>
+					<li><a class="button-link" href="/admin/logout" title="Logout the admin panel!" rel="tooltip">logout</a></li>
+				</ul>
+			</div>
+		</section>
+		<!-- /User Info -->
+		
+		<!-- Main Navigation -->
+		<nav id="main-nav">
+			<ul>
+				<li class="current"><a href="/admin" title="" class="dashboard no-submenu">Dashboard</a></li> <!-- Use class .no-submenu to open link instead of a sub menu-->
+				
+				<li>
+					<a href="" title="Users" class="articles">Users</a>
+					<ul>
+						<li><%= link_to "Users Management", admin_users_path %></li>
+						<li><%= link_to "Add User", new_admin_user_path %></li>
+					</ul>
+				</li>
+				
+				<li>
+					<a href="" title="" class="projects">Pages</a>
+					<ul>
+						<li><%= link_to "Pages Management", admin_pages_path %></li>
+						<li><%= link_to "Add Page", new_admin_page_path %></li>
+					</ul>
+				</li>
+				<li>
+					<a href="" title="" class="teams">Team</a>
+					<ul>
+						<li><%= link_to "Team Management", admin_teams_path %></li>
+						<li><%= link_to "Add Team Member", new_admin_team_path %></li>
+					</ul>
+				</li>
+				<li>
+					<a href="" title="" class="jobs">Executive Opportunities</a>
+					<ul>
+						<li><%= link_to "Job Posts Management", admin_job_posts_path %></li>
+						<li><%= link_to "Add a Job Post", new_admin_job_post_path %></li>
+						<li><%= link_to "Company Management", admin_companies_path %></li>
+						<li><%= link_to "Add Company", new_admin_company_path %></li>
+						<li><%= link_to "Job Industry Management", admin_job_industries_path %></li>
+						<li><%= link_to "Add Job Industry", new_admin_job_industry_path %></li>
+						<li><%= link_to "Job Classification Management", admin_job_classifications_path %></li>
+						<li><%= link_to "Add Job Classification", new_admin_job_classification_path %></li>
+						<!-- <li><%#= link_to "Position Management", admin_positions_path %></li>
+						<li><%#= link_to "Add Position", new_admin_position_path %></li> -->
+					</ul>
+				</li>
+				<li>
+					<a href="" title="" class="products">Contact Us</a>
+					<ul>
+						<li><%= link_to "Branches Management", admin_branches_path %></li>
+						<li><%= link_to "Add Branch", new_admin_branch_path %></li>
+					</ul>
+				</li>
+				<li>
+					<a href="" title="" class="links">Links</a>
+					<ul>
+						<li><%= link_to "Partners Management", admin_partners_path %></li>
+						<li><%= link_to "Add Partners", new_admin_partner_path %></li>
+						<!-- <li><%#= link_to "Links Management" %></li>
+						<li><%#= link_to "Add Links" %></li> -->
+					</ul>
+				</li>
+				
+			<!--
+				<li>
+					<a href="" title="News Headlines" class="articles">News Headlines</a>
+					<ul>
+					
+					</ul>
+				</li>
+				
+				
+				<li>
+					<a href="" title="" class="events">Events</a>
+					<ul>
+					
+					</ul>
+				</li>
+				<li>
+					<a href="" title="" class="products">Travel Package</a>
+					<ul>
+					
+					</ul>
+				</li>
+				
+				<li>
+					<a href="" title="" class="gallery">Advertisement</a>
+					<ul>
+						
+					</ul>
+					
+				</li>
+			-->
+			
+				<li>
+					<a href="" title="" class="gallery">Multimedia</a>
+					<ul>
+						<!-- <li><%#= link_to "Banner", admin_banners_path %></li>
+						<li><%#= link_to "Add Banner", new_admin_banner_path %></li>
+						 -->
+						<li><%= link_to "Top Banner", admin_topbanners_path %></li>
+						<li><%= link_to "Add Top Banner", new_admin_topbanner_path %></li>
+						<li><%= link_to "Content Images", admin_content_images_path %></li>
+						<li><%= link_to "Add Content Images", new_admin_content_image_path %></li>
+						
+						<!-- <li><%#= link_to "Video", admin_project_videos_path %></li>
+						<li><%#= link_to "Add Video", new_admin_project_video_path %></li> -->
+					</ul>
+					
+				</li>
+				<li>
+					<a href="" title="" class="settings">System Settings</a>
+					<ul>
+						<li><%= link_to "Languages", admin_locales_path %></li>
+						<li><%= link_to "Design Templates", admin_design_templates_path %></li>
+						<li><%= link_to "SEO", edit_admin_seo_path(1) %></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<!-- /Main Navigation -->
+		
+	</section>
+	<!-- /Aside Block -->
+	
+	<!-- Main Content -->
+	<section role="main">
+	
+		<!-- Breadcumbs -->
+		<ul id="breadcrumbs">
+			<li><a href="/admin" title="Back to Homepage">Back to Home</a></li>
+			<li><a href="/admin/<%= session[:current_page_name].downcase %>"><%= session[:current_page_name] %></a></li>
+			<li><%= @title %></li>
+		</ul>
+		<!-- /Breadcumbs -->
+		
+		<!-- Full Content Block -->
+		<%= yield(:content) %>
+		<article class="full-block clearfix">
+					<!-- Article Container for safe floating -->
+					<div class="article-container">
+		                 <footer>
+							<p>THE ADVITOR CMS System v.1.1<br/>Copyright © <a href="http://advitor.com" rel="modal">THE ADVITOR</a> & Powered By <a href="http://defapp.com" rel="modal">defapp Limited</a></p>
+						</footer>
+					</div>
+					<!-- /Article Container -->
+				</article>
+				<!-- /Full Content Block -->
+	</section>
+	<!-- /Main Content -->
+
+	<!-- JS Libs at the end for faster loading -->
+
+	
+	<%= javascript_include_tag 'admin/js/libs/selectivizr.js' %>
+	<%= javascript_include_tag 'admin/js/jquery/jquery.facebox.js' %>
+	<%= javascript_include_tag 'admin/js/jquery/jquery.tipsy.js' %>
+	<%= javascript_include_tag 'admin/js/jquery/jquery.wysiwyg.js' %>
+	<%= javascript_include_tag 'admin/js/jquery/jquery.datatables.js' %>
+	<%= javascript_include_tag 'admin/js/jquery/jquery.datepicker.js' %>
+	<%= javascript_include_tag 'admin/js/jquery/jquery.fileinput.js' %>
+	<%= javascript_include_tag 'admin/js/jquery/jquery.fullcalendar.min.js' %>
+	<%= javascript_include_tag 'admin/js/jquery/excanvas.js' %>
+	<%= javascript_include_tag 'admin/js/jquery/jquery.visualize.js' %>
+	<%= javascript_include_tag 'admin/js/script.js' %>
+	<%= javascript_include_tag 'rails.validations' %>
+	
+	<script>
+		$(function() {
+			$( "#news_publish_date" ).datepicker({ dateFormat: 'yy-mm-dd'});
+		});
+	</script>
+</body>
+</html>
+<!-- Localized -->

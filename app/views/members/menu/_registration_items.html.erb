@@ -1,0 +1,9 @@
+<% if member_signed_in? %>
+<span class="new_member">
+  <%= link_to('edit profile', edit_member_registration_path) %>
+</span>
+<% else %>
+<span class="new_member">
+	<%= link_to('be a member?', new_member_registration_path) %>
+</span>
+<% end %>

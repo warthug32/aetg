@@ -1,0 +1,100 @@
+<% content_for :header_meta do%>
+<!-- // Meta //  -->
+<meta charset="utf-8">   
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<% end %>
+
+<% content_for :content do %>
+<article class="full-block clearfix">
+		
+			<div class="article-container">
+            <section>
+				<% if params[:notice] %>
+					<div class="notification success">
+						<a href="#" class="close-notification" title="Hide Notification" rel="tooltip">x</a>
+						<p><strong>Success notification:</strong> <%= params[:notice] %></p>
+					</div>
+				<% end %>
+				<% if params[:warning] %>
+					<div class="notification error">
+						<a href="#" class="close-notification" title="Hide Notification" rel="tooltip">x</a>
+						<p><strong>Error notification:</strong> <%= params[:warning] %></p>
+					</div>
+				<% end %>
+	
+	
+					<div class="sidetab default-sidetab" id="sidetab1">
+							<h3>List of Projects</h3>
+                            <p>
+                                <%= link_to "Create New", new_admin_project_path %>
+                            </p>
+							<table class="datatable">
+								<thead>
+									 <tr>
+                                        <th>
+                                            Project Name
+                                        </th>
+										<th>
+											Tag
+										</th>
+                                        <th>
+                                            Locale
+                                        </th>
+                                        <th>
+                                            Created At
+                                        </th>
+										<th>
+                                            Is Published?
+                                        </th>
+                                        <th></th>
+                                    </tr>
+								</thead>
+								<tbody>
+									<% for project in @projects %>
+									<tr class="gradeX">
+										<td><%= project.title %></td>
+										<td><%= project.tag %></td>
+										<td><%= project.locale %></td>
+										<td><%= project.created_at.strftime("%m-%d-%Y") %></td>
+										<td>
+											<% if project.activate == true %>
+												<%= image_tag 'admin/img/icons/list-style/icon_list_style_checkmark.png' %>
+											<% else %>
+												<%= image_tag 'admin/img/icons/list-style/icon_list_style_cross.png' %>
+											<% end %>
+										</td>
+										<td><a href="/admin/project_images/<%= project.id %>/project">Manage Image</a> | <a href="/admin/project_videos/<%= project.id %>/project">Manage Video</a> | <%= link_to "Edit", edit_admin_project_path(project) %> |
+                                        <%= link_to "Delete", admin_project_path(project), :confirm => 'Are you sure?', :method => :delete, :title => "Delete" %></td>
+										
+									</tr>
+									<% end %>
+									
+								</tbody>
+								<tfoot>
+									<tr>
+										<th>
+                                            Project Name
+                                        </th>
+										<th>
+											Tag
+										</th>
+                                        <th>
+                                            Locale
+                                        </th>
+                                        <th>
+                                            Created At
+                                        </th>
+										<th>
+                                            Is Published?
+                                        </th>
+                                        <th></th>
+									</tr>
+								</tfoot>
+							</table>
+</div>
+</section>
+</div>
+</article>
+<% end %>

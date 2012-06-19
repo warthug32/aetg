@@ -1,0 +1,362 @@
+/* Foundation v2.2 http://foundation.zurb.com */
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+#logo{margin: 0px; padding:0;}
+
+nav{ margin-bottom:10px;position: relative;}
+nav ul{ list-style:none; display: block; margin: 0 1px;}
+nav ul li{ float:left; margin: 0 8px 0 0; color:#100051; font-size: 12px; font-family: times; padding: 0 4px; border-left: 3px solid #100051; }
+nav.cn ul li{ float:left; margin: 0 10px 0 0; color:#100051; font-size: 14px; font-family: times; padding: 0 20px 0 30px; border-left: 3px solid #100051; }
+nav ul li a{color:#100051;}
+/*nav ul li a:hover{color:#100051;}*/
+
+section.sitemap article header{ font-family:"Times New Roman"; font-size: 23px; font-weight:bold; color: #00235d; border:none; padding-left: 22px;}
+section.sitemap article ul{list-style:none; margin:20px 0 0 22px;}
+section.sitemap article ul li{font-size: 11px; font-family: times; line-height:2px; }
+section.sitemap article p{ padding: 10px 0 5px 22px; font-size:11px;}
+#social{ padding: 10px 0 10px 5px;}
+
+
+footer{ background-color:#011431; margin-top:20px; height:15px;}
+footer p{ padding: 3px 0 0 23px; color: #a7a7a7; font-family: "Myriad Pro"; font-size: 9px;}
+
+
+.border{ border: 3px solid #00235d;margin-bottom:3px;}
+.thin_border{ border: 1px solid #00235d;margin-top:0;padding-top:0;}
+
+
+
+.container .four.columns .user_options {background: #00235d;width:260px;padding:9px 5px;margin-left:8px;color:#ffffff;}
+.container .four.columns .login a {padding:6px;font-weight:bold;color:#ffffff;}
+.container .four.columns .new_member a {color:#9d9fa2;display:inline;padding-left:8px}
+.container .four.columns .lang {font-family: Times;position:absolute; right:10px;}
+.container .four.columns .lang a {color:#dcddde;}
+.container .four.columns .search_area {display:inline-block;padding-top:8px;}
+.container .four.columns .search_area span:first-child{color:#ffffff;font-family: Times;font-size: 10px;font-weight:bold;display:inline-block;padding-left:6px;}
+.container .four.columns .search_area form {display:inline-block;margin-bottom:0;background:#ffffff;padding:1px;border:1px solid #cccccc;height:20px;}
+.container .four.columns .search_area input[type=text] {width: 164px;height:15px;border:none;font-family: Arial, Helvetica, sans-serif; font-size: 11px;font-weight:normal;margin:1px 0;}
+.container .four.columns .search_area input.focused {color:#000000;}
+.container .four.columns .search_area input.form-text{color: #cccccc;}
+.container .four.columns .search_area input[type=image] {width:18px;height:14px;vertical-align:-2px;background:#ffffff;padding:1px 2px 1px 2px;margin-left:0;}
+.row .sitemap a {color:#666666;}
+
+/* -----------------------------------------
+   Page Home
+----------------------------------------- */
+section.features { padding-top: 10px; }
+/**/
+section.features article.four.columns { height:400px;border-left: #e3e3e3 3px solid;padding-right:0;margin-right:0;padding-left:0;margin-left:0px;width:310px; }
+section.features article div.body_content {overflow: auto;max-height:330px;margin-right:10px;margin-left:22px;width: 285px; }
+section.features article div.body_content p {font-family:Arial, Helvetica, sans-serif;font-weight:bold;font-size:13px; padding: 0 10px 0 0;}
+section.features article div.body_content p a {color: #00235d;}
+section.features article header{ font-family:"Times New Roman"; line-height:30px; font-size: 30px; font-weight:bold; color: #00235d; padding: 0 0 0 22px}
+/*section.features article:first-child header, section.features article:last-child header{padding-top:25px;line-height: 10px;padding-bottom:25px;}*/
+section.features article.four.columns header {height:60px;}
+section.features article.four.columns header.cn{height:40px;}
+section.features #partners {padding-left:0;margin-left:0;float:left;}
+
+.headerBorder{ margin-left:-3px; border-left: #00235d 3px solid; }
+
+table.tableEO{ margin: 10px 0 0 22px; width:250px; }
+
+table.tableEO tr td{ padding-left:15px; }
+table.tableEO tr td:first-child{ background:url("frontend/eo1.png") no-repeat;color:#fff;text-align:center;font-size:12px;font-weight:bold;font-family:Myriad Pro, sans-serif;letter-spacing:1px; }
+table.tableEO tr td.td_date{background:url("frontend/eo2.png") no-repeat;font-size:13px;font-family:Myriad Pro, sans-serif;}
+
+/* --------------------------------------------- */
+
+table.tablePa{ margin: 8px 0 0 22px; width:250px; text-align:center; border:none;margin-left:22px;}
+table.tablePa tr td{ color:#FFF;padding:1px;}
+table.tablePa tr td img{width:138px;height:71px;}
+
+
+/* -----------------------------------------
+   Page Team
+----------------------------------------- */
+section.teamFeatures { padding-top: 10px; }
+section.teamFeatures article.two.columns, section.teamFeatures article.seven.columns, section.teamFeatures article.three.columns { border-left: #e3e3e3 3px solid;min-height:820px; }
+section.teamFeatures article header{ font-family:"Times New Roman"; line-height:30px; font-size: 18px; font-weight:bold; color: #006875; padding-left: 22px;}
+section.teamFeatures article:first-child header{text-align:right;}
+section.teamFeatures article.three.columns.links{float:left;margin-left:0;margin-left:10px;}
+.headerTeamBorder{ margin-left:-3px; border-left: #006875 3px solid; }
+section.teamFeatures article p { font-family: Arial, Helvetica, sans-serif; font-size: 12px;line-height:20px; padding: 20px 0 0 22px;font-weight:bold;}
+section.teamFeatures article p a {color:#006875;font-weight:bold;}
+section.teamFeatures article ul{list-style:none; padding:20px 0px 0 22px;}
+section.teamFeatures article ul li{font-size: 12px; font-family: times; line-height:12px;text-align:right; }
+section.teamFeatures article ul li a {color:#666666;}
+section.teamFeatures article ul li a.selected {font-weight:bold;}
+section.teamFeatures article .member_container {max-height:790px;overflow: auto;margin-top:10px;margin-right:0;}
+section.teamFeatures article .contact_info p {font-weight:normal;}
+section.teamFeatures article .contact_info p a {font-weight:bold;}
+section.teamFeatures article .member_description {float:left;width:430px;}
+section.teamFeatures article .member_description h4 {font-family:"Times New Roman"; line-height:20px; font-size: 18px; font-weight:bold; color: #006875; padding-left: 22px;font-variant:small-caps;}
+section.teamFeatures article .row article header {font-family:"Times New Roman"; font-size: 14px; font-weight:bold; color: #006875; padding-left: 22px;text-align: left;}
+section.teamFeatures article .member_description p, section.teamFeatures article .row article p {padding-top:0;font-weight:normal;margin-top:0;margin-bottom:10px;}
+#member_container {width:600px;margin-left:20px;}
+#member_container .row {clear:both;}
+#teamContact{  min-width:300px;margin-left:2px;float:left;}
+#teamContact header {margin-bottom:8px;}
+#teamContact p {font-weight:bold;:12px;margin-bottom:10px;padding:0px 22px;line-height: 12px;}
+#teamContact p a {font-weight:normal;color: #006875;}
+#teamImg {padding: 0 0 20px 22px; width:120px;margin-right:0;}
+#memberImg {padding: 0 0 20px 22px; width:140px;height:180px;margin-right:0;float:left;position:relative;}
+#memberImg img {width:140px;height:180px;}
+
+/* -----------------------------------------
+   Page About
+----------------------------------------- */
+section.aboutFeatures { padding-top: 10px; }
+section.aboutFeatures article { border-left: #e3e3e3 3px solid;margin-bottom:10px;float:left;position: relative;min-height: 1px;margin-left:0;padding-right:10px;}
+section.aboutFeatures article:last-child {float: right;}
+section.aboutFeatures article.values { height:430px; }
+section.aboutFeatures article.history { height:440px; }
+section.aboutFeatures article.edge { height:340px; }
+section.aboutFeatures article.solutions { height:720px; }
+section.aboutFeatures article.message { height:900px;}
+section.aboutFeatures article header{ font-family:"Times New Roman"; line-height:30px; font-size: 20px; font-weight:bold; color:  #00235d; padding-left: 22px;}
+section.aboutFeatures article h4 {font-family:"Times New Roman"; font-size: 16px; font-weight:bold; color:  #00235d; padding: 10px 0 0 22px;;margin-bottom: 0;margin-top:10px;}
+section.aboutFeatures article:first-child header {text-align:right;}
+.headeraboutBorder{ margin-left:-3px; border-left:  #00235d 3px solid;}
+section.aboutFeatures article p { font-family: Arial, Helvetica, sans-serif; font-size: 12px;  padding: 10px 32px 0 22px;margin-top:0;margin-bottom:0;}
+section.aboutFeatures article ol {margin:15px 32px 0 80px;}
+section.aboutFeatures article ol li {font-family: Arial, Helvetica, sans-serif; font-size: 12px;line-height:20px;}
+section.aboutFeatures article ul{list-style:none;padding:10px 0;}
+section.aboutFeatures article ul li{font-size: 12px; font-family: times;text-align:right;line-height:12px; }
+section.aboutFeatures article ul li a{color:#666666;}
+section.aboutFeatures article ul li a.selected{font-size:12px;font-weight:bold;}
+section.aboutFeatures article img {margin-left:7%;padding-top:30px;}
+section.aboutFeatures article p.company_name {font-weight:bold;color:  #00235d;}
+section.aboutFeatures article p.signature img {margin:0;padding-top:15px;}
+
+
+
+
+/* -----------------------------------------
+   Page Contact US
+----------------------------------------- */
+section.contactusFeatures { padding-top: 10px; }
+section.contactusFeatures article { border-left: #e3e3e3 3px solid; }
+section.contactusFeatures article.eight.columns, section.contactusFeatures article.three.columns {height:380px;}
+section.contactusFeatures article header{ font-family:"Times New Roman"; line-height:30px; font-size: 20px; font-weight:bold; color:  #00235d; padding-left: 22px;}
+section.contactusFeatures article p { font-family: Arial, Arial, Helvetica, sans-serif; font-size: 12px;  padding: 0 12px 0 22px; font-weight:bold;}
+section.contactusFeatures article p a {color: #00235d; font-weight:bold;}
+.headerContactUs{ margin-left:-3px; border-left:  #00235d 3px solid; }
+.row .row section article {border-left:none;}
+.row .row section article header.branch {font-size:12px;font-family: Arial, Helvetica, sans-serif; font-weight:bold;padding-left:0;}
+.row .row section article  ul {list-style:none;}
+.row .row section article  ul li {font-size: 12px; font-family: Arial, Helvetica, sans-serif;text-align:left;margin-bottom:5px;margin-top:0;line-height:21px;}
+.row .row section article  ul li a {color:#666666;}
+
+
+/* -----------------------------------------
+   Page Our Services
+----------------------------------------- */
+section.servicesFeatures { padding-top: 10px; }
+section.servicesFeatures article { border-left: #e3e3e3 3px solid; }
+section.servicesFeatures article.ten.columns{margin-right:0;padding-right:0;height:620px;}
+section.servicesFeatures article.two.columns.links {float:left;margin-left:5px;padding-left:0;height:620px;}
+section.servicesFeatures article header{ font-family:"Times New Roman"; font-size: 20px; font-weight:bold; color:  #00235d; padding-left:22px;margin-bottom:10px;margin-left:-3px; border-left:  #00235d 3px solid;line-height: 30px;}
+section.servicesFeatures article ul {list-style:none;padding: 0 0px 0 22px;}
+section.servicesFeatures article ul li { font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-weight:bold;line-height:10px;}
+section.servicesFeatures article ul li a {color: #00235d; font-weight:bold;}
+.row section.servicesFeatures .row div.service {float:left;padding:0 3px 0 15px;width:180px;position: relative;min-height: 1px;display:block;;overflow:auto; }
+.row section.servicesFeatures .row div.service div {height:40px;vertical-align:bottom;}
+.row section.servicesFeatures .row p {font-family: Arial, Helvetica, sans-serif;text-align:center;font-weight:normal;padding:10px 10px 0 5px;line-height:20px;}
+.row section.servicesFeatures .row p.headerServices_categories {width:174px;text-align:center;padding:0 3px 0 3px;font-family:Arial, Helvetica, sans-serif; font-size: 18px; font-weight:bold; color: #1b478e;border-left:none;line-height:20px;margin-bottom:0;}
+/*.row section.servicesFeatures .row p.headerServices_categories.two_lines {top:45px;}
+.row section.servicesFeatures .row p.headerServices_categories.five_lines {top:10px;}*/
+.row section.servicesFeatures .row p.headerServices_links {width:174px;text-align:center;padding:0 3px 0 3px;font-family:Arial, Helvetica, sans-serif; font-size: 14px; font-weight:bold; color: #1b478e;border-left:none;line-height:15px;margin-top:10px;height:30px;}
+
+
+
+
+/* -----------------------------------------
+   Page Our Successful Stories
+----------------------------------------- */
+section.storiesFeatures { padding-top: 10px;}
+section.storiesFeatures article { border-left: #e3e3e3 3px solid;margin-bottom:10px;position: relative; }
+section.storiesFeatures article.competitive, section.storiesFeatures article.assessment {height:470px;}
+section.storiesFeatures article.patent {height:530px;}
+section.storiesFeatures article.blue {height:600px;}
+section.storiesFeatures article.three.columns{margin-right:0;padding-right:10px;}
+section.storiesFeatures article.nine.columns{float:left;margin-left:0;padding-left:0;}
+section.storiesFeatures article.nine.columns div.content_holder{overflow: auto;max-height:530px;margin-top:14px;}
+section.storiesFeatures article.nine.columns div.content_holder h3 {font-family:"Times New Roman"; font-size: 16px; font-weight:bold; color:  #1150b8; padding-left: 22px;margin-bottom:0px;}
+section.storiesFeatures article header.headerStories{ font-family:"Times New Roman"; font-size: 20px; font-weight:bold; color:  #1150b8; padding-left: 22px;margin-left:-3px; border-left:  #1150b8 3px solid;height:40px;padding-top:10px;}
+section.storiesFeatures article header.headerStories.cn {height:30px;}
+/*section.storiesFeatures article.nine.columns header.headerStories{height: 40px;}*/
+section.storiesFeatures article:first-child header {text-align:right;padding-right:10px;}
+section.storiesFeatures article section header {font-family:Arial, Helvetica, sans-serif; font-size: 12px; font-weight:bold; color:  #1150b8;padding-top:20px; padding-left: 22px;}
+section.storiesFeatures article:first-child section ul {list-style:none; padding:20px 10px 0 22px;}
+section.storiesFeatures article:first-child section ul li {font-size: 12px; font-family: times;text-align:right;line-height:12px;color:#666666; }
+section.storiesFeatures article:first-child section ul li a {color:#666666;}
+section.storiesFeatures article:first-child section ul li a.selected {font-weight:bold;}
+section.storiesFeatures article section p {color:#666666;line-height:20px;margin-bottom:0;font-family:Arial, Helvetica, sans-serif;padding:10px 12px 0 22px;}
+  
+
+/* -----------------------------------------
+   Page Our Practices
+----------------------------------------- */
+section.practicesFeatures { padding-top: 10px;}
+section.practicesFeatures article { border-left: #e3e3e3 3px solid;margin-bottom:10px; }
+section.practicesFeatures article.banking, section.practicesFeatures article.consumer{height:520px;}
+section.practicesFeatures article.industrial{height:450px;}
+section.practicesFeatures article.medical{height:850px;}
+section.practicesFeatures article.practices_content {width:58%;margin-right:0;margin-left:7%;float:left;position: relative;}
+section.practicesFeatures article header{ font-family:"Times New Roman";line-height:30px; font-size: 20px;font-weight:bold; color:  #666600; padding-left: 22px;}
+section.practicesFeatures article.two.columns header {text-align:right;width:150px;line-height:15px;}
+.headerPractices{ margin-left:-3px; border-left:  #666600 3px solid; }
+section.practicesFeatures article.two.columns section article {border:none;}
+section.practicesFeatures article.two.columns section header {font-family:"Helvetica", sans-serif; font-size: 12px; font-weight:bold; color:  #666600; padding: 10px 0 0 22px;line-height:15px;}
+section.practicesFeatures article.two.columns section ul{list-style:none; padding:20px 12px 0 22px;width:150px;}
+section.practicesFeatures article.two.columns ul li{font-size: 12px; font-family: times;text-align:right;line-height:12px; }
+section.practicesFeatures article.five.columns {width:80%;}
+section.practicesFeatures article.two.columns ul li a{color:#666666;}
+section.practicesFeatures article.two.columns ul li a.selected{font-size:12px;font-weight:bold;}
+section.practicesFeatures article.two.columns img {margin-left:7%;padding-top:30px;}
+section.practicesFeatures article.practices_content p {color:#666666;padding:0 10px 0 22px;line-height:20px;margin-bottom:0;font-family:Arial, Helvetica, sans-serif;font-weight:bold;margin-top:10px;}
+section.practicesFeatures article.practices_content ul.hyphen{list-style-image:url(../images/hyphen.jpg); padding:0 10px 0 22px;margin-left: 14px;}
+section.practicesFeatures article.practices_content ul.bullet{list-style:disc; padding:10px 10px 10px 22px;margin:10px 24px 10px 34px;}
+section.practicesFeatures article.practices_content ul li {color: #666666;font-weight:bold;line-height:20px;font-family:Arial, Helvetica, sans-serif;}
+section.practicesFeatures article.practices_content section.content_body {float:left;width:75%;}
+section.practicesFeatures article.practices_content section.content_body h4 {font-family:"Helvetica", sans-serif; font-size: 14px; font-weight:bold; color:  #666600; padding: 20px 0 0 22px;line-height:15px;}
+section.practicesFeatures article.practices_content #practices_img {float:left;width:25%;margin-top:5px;}
+section.practicesFeatures article.practices_content #practices_img p {text-align: center;padding:0 0 2px 0}
+.practices_content header, .practices_links header  {}
+section.practicesFeatures article.practices_links {width:165px;float:left;margin-left: 15px;}
+section.practicesFeatures article.practices_links ul {list-style:none; padding:10px 12px 0 22px;} 
+section.practicesFeatures article.practices_links  ul li {font-size: 12px; font-family: Arial, Helvetica, sans-serif;text-align:left;margin-bottom:5px;margin-top:0;line-height:20px;font-weight:bold;}
+section.practicesFeatures article.practices_links ul li a {color:#666600;}
+
+
+
+
+
+/* -----------------------------------------
+   Page Advantages
+----------------------------------------- */
+section.advantagesFeatures { padding-top: 10px; }
+section.advantagesFeatures article { border-left: #e3e3e3 3px solid;margin-bottom:10px;height:430px; }
+section.advantagesFeatures article.three.columns{margin-right:0;padding-right:20px;text-align:right;}
+section.advantagesFeatures article.nine.columns {float:left;margin-left:0;padding-left:0;padding-right:10px;}
+section.advantagesFeatures article.experienced {height:400px;}
+section.advantagesFeatures article.scientific, section.advantagesFeatures article.effective {height:900px;}
+section.advantagesFeatures article.process {height:870px;}
+section.advantagesFeatures article.web {height:670px;}
+section.advantagesFeatures article header.headerAdvantages{font-family:"Times New Roman"; font-size: 20px; font-weight:bold; color:  #660033; padding-left: 22px;margin-left:-3px; border-left:  #660033 3px solid;line-height:30px;}
+section.advantagesFeatures article.three.columns ul {list-style:none; padding:20px 0px 0 22px;}
+section.advantagesFeatures article.three.columns ul li {font-size: 12px; font-family: Arial, Helvetica, sans-serif;line-height: 15px;}
+section.advantagesFeatures article.three.columns ul li a {color:#666666;}
+section.advantagesFeatures article.three.columns ul li a.selected {font-weight:bold;}
+section.advantagesFeatures article.nine.columns p {font-size: 12px; font-family: Arial, Helvetica, sans-serif;line-height: 20px;padding:10px 22px 0 22px;margin-top:0;margin-bottom:5px;}
+section.advantagesFeatures article.nine.columns p span.goal {font-weight: bold;color:#660033;}
+section.advantagesFeatures article.nine.columns ul.hyphen {list-style-image:url('frontend/hyphen.jpg'); padding:0 32px 0 22px;margin-left: 30px;margin-bottom:0;}
+section.advantagesFeatures article.nine.columns ul.bullet {list-style-type: disc; padding:0 32px 0 22px;margin-left: 30px;}
+section.advantagesFeatures article.nine.columns ul li {font-size: 12px; font-family: Arial, Helvetica, sans-serif;line-height: 15px;}
+section.advantagesFeatures article.nine.columns table {margin-left:22px;}
+section.advantagesFeatures article.nine.columns table.scientificTbl td {width:150px;vertical-align: middle;text-align: left;font-size: 12px; font-family: Arial, Helvetica, sans-serif;line-height: 20px;color:#666666;border:1px solid #666666;}
+section.advantagesFeatures article.nine.columns table.scientificTbl td:nth-child(odd) {background-color:#e3e3e3;font-weight: bold;}
+section.advantagesFeatures article.nine.columns .content_holder {max-height:850px;min-height:380px;overflow:auto;position: relative;}
+section.advantagesFeatures article.nine.columns .six  {float:left;margin-right:0;margin-left:4px;position: relative;}
+section.advantagesFeatures article.nine.columns .six:last-child {margin-left:0;padding-left:0;float:left;}
+
+
+
+/* -----------------------------------------
+   Page Executive Opportunities
+----------------------------------------- */
+section.executiveFeatures { padding-top: 10px; }
+section.executiveFeatures article { border-left: #e3e3e3 3px solid;margin-bottom:2px;min-height:400px;}
+section.executiveFeatures article.posts {min-height:450px;}
+section.executiveFeatures article.job_post {min-height:800px;}
+
+
+section.executiveFeatures article header{font-family:"Times New Roman"; font-size: 20px; font-weight:bold; color:  #330066; padding-left: 22px;line-height:30px;padding-right:12px;}
+section.executiveFeatures article.three.columns{margin-right:0;padding-right:10px;}
+section.executiveFeatures article.nine.columns{float:left;margin-left:0;padding-left:0;}
+.headerExecutive{ margin-left:-3px; border-left:  #330066 3px solid; }
+section.executiveFeatures article dl.tabs { display: block; margin: 0 0 0px 0; padding: 0; height: 30px;border-bottom:3px solid #330066;width:96%; }
+section.executiveFeatures article dl.tabs dd { display: block; width: auto; height: 30px; padding: 0; float: left;font-weight:bold;font-size:20px;font-family:"Times New Roman"; font-size: 20px; }
+section.executiveFeatures article dl.tabs dd a { display: block; width: auto; height: 29px; padding: 0 9px; line-height: 30px; margin: 0 -1px 0 0; color: #ccc;background:#fff;border:none; }
+section.executiveFeatures article dl.tabs dd a.active { background: #330066; color:#fff;height: 30px; }
+section.executiveFeatures article .tabs-content {margin: 0 0 20px 0;}
+section.executiveFeatures article .tabs-content table { border-collapse:collapse;width: 400px;border: none;}
+section.executiveFeatures article .tabs-content table tr td {padding: 4px 12px;font-family:"Times New Roman"; font-size: 12px; font-weight:bold;border: none;}
+section.executiveFeatures article .tabs-content table tr td select {display: inline;}
+section.executiveFeatures article .tabs-content input[type="submit"] {background:#330066;color:#fff;font-family:"Times New Roman";}
+
+section.executiveFeatures article ul{list-style:none; padding:20px 12px 0 22px;}
+section.executiveFeatures article ul li{font-size: 12px; font-family: times;text-align:right;line-height:12px; }
+section.executiveFeatures article ul li a{color:#666666;}
+section.executiveFeatures article ul li a.selected{font-size:12px;font-weight:bold;}
+section.executiveFeatures article:first-child header {text-align:right;}
+section.executiveFeatures article p { font-family: Arial, Helvetica, sans-serif; font-size: 14px;  padding: 0 32px 0 22px;}
+section.executiveFeatures article.nine.columns div.position {width:95%;background:#e3e3e3;min-height:40px;margin:-10px 12px;}
+section.executiveFeatures article.nine.columns div.position p {text-align:center;padding:11px 5px 11px 5px;font-family: Arial, Helvetica, sans-serif; font-size: 16px;font-weight:bold;color:#999999;}
+section.executiveFeatures article.nine.columns header  {margin-bottom:20px;height:30px;}
+section.executiveFeatures article ul{list-style:none; padding:20px 12px 0 22px;}
+section.executiveFeatures article ul li{font-size: 12px; font-family: times;text-align:right;line-height:12px; }
+section.executiveFeatures article ul li a{color:#666666;}
+section.executiveFeatures article ul li a.selected{font-size:12px;font-weight:bold;}
+section.executiveFeatures article img {margin-left:22px;padding-top:3px;}
+
+
+/*for job posts display*/
+.jobposts_container .post_control {margin-left: 22px;width:100%;}
+.jobposts_container .post_control table  {border-collapse:collapse;border: none;width:98%;}
+.jobposts_container .post_control table tbody tr {background: #ccc;}
+.jobposts_container .post_control table tbody tr td {height: 20px;padding:2px 4px;}
+.jobposts_container .post_control table tbody tr td select {margin-bottom:0; margin:0 0 0 22px}
+.jobposts_container .post_data div.job_post {width:98%;background:#eee;max-height:200px;margin-left:22px;margin-bottom:10px;position:relative;padding-top:6px;padding-bottom:6px;}
+.jobposts_container .post_data div.job_post table {background:#eee;border-collapse:collapse;border: none;width:98%;margin:0;}
+.jobposts_container .post_data div.job_post table tr td:first-child {width:250px;}
+.jobposts_container .post_data div.job_post p {font-family: Arial, Helvetica, sans-serif;}
+.jobposts_container .post_data div.job_post p.header {color: #330066;font-size:14px;font-weight:bold;padding:2px 10px;margin:0;line-height:15px;}
+.jobposts_container .post_data div.job_post p.header a {color: #330066;}
+.jobposts_container .post_data div.job_post div.description p {font-size:12px;padding:0;line-height:10px;padding:3px 10px;margin:2px 0px;}
+.jobposts_container .post_data div.job_post p.classification {font-size:10px;padding:0;line-height:10px;padding:3px 10px;margin:2px 0px;}
+.jobposts_container .post_data div.job_post p.classification span {color: #330066;font-weight:bold;}
+
+
+/*display single job post*/
+.jobposts_container .job_details {margin-left: 22px;width:98%;background:#e3e3e3;min-height:680px;position:relative;}
+.jobposts_container .job_details .job_info {height:70px;}
+.jobposts_container .job_details .job_info table {border-collapse:collapse;width:100%;margin:0;background:#e3e3e3;border:none;}
+.jobposts_container .job_details .job_info table tr td {}
+.jobposts_container .job_details p {font-family: Arial, Helvetica, sans-serif;}
+.jobposts_container .job_details .job_info p.classification {font-size:12px;padding:0;line-height:10px;padding:3px 10px;margin:0 0px;}
+.jobposts_container .job_details .job_info p.classification span {color: #330066;font-weight:bold;}
+.jobposts_container .job_details .job_description {width:98%;background:#ffffff;height:584px;margin-left:1%;margin-top:3%;position:absolute;overflow:auto;}
+.jobposts_container .job_details .job_description p.position {font-size:20px;margin:5px 4px 10px 4px;background:#000000;position: relative;line-height:40px;color:#ffffff;font-weight:bold;text-align:center;}
+.jobposts_container .job_details .job_description p.header {color: #330066;font-size:12px;font-weight:bold;padding:2px 10px;margin:0;line-height:15px;}
+.jobposts_container .job_details .job_description .company_info {margin-bottom:20px;}
+.jobposts_container .job_details .job_description .company_info div.company p {font-size:12px;padding:0;line-height:20px;padding:3px 10px;margin:2px 0px;}
+.jobposts_container .job_details .job_description .company_info ul {list-style-image:url('frontend/arrow.png'); }
+.jobposts_container .job_details .job_description .company_info ul li {font-size: 12px; font-family: times;text-align:left;line-height:12px;}
+.jobposts_container .button_holder {float:right;position:absolute;}
+.jobposts_container .button_holder a {margin:20px 22px;background:#330066;font-weight:bold;}
+
+
+
+.modal-bg { position:absolute;width:300px;height:700px;top:0px;left:0px;z-index:9998;background-color:#fff;opacity:0.7;filter:alpha(opacity=70); /* For IE8 and earlier */ }
+.modal { position:fixed;z-index:9999;width:320px;border:solid 1px #ccc;background-color:#fff }
+.modal h2 { margin:5px 0 10px;padding:10px 15px 5px;font-size:1.3em;font-weight:normal; }
+.modal .content { padding: 0 15px 14px; }
+.modal .content label { display:block;margin:0;padding:3px 0; }
+.modal .content .txtfield { width:96%; }
+.modal .footer { display:block;padding:14px 0 0;text-align:right; }
+.modal .footer .btn { margin-left:5px;font-weight:normal; }
+.modal a.cancel { position:relative;top:10px;right:0px;display:block;width:15px;height:10px;border:1px solid #ccc; }
+.modal a.cancel:hover { background-position:-21px top; }

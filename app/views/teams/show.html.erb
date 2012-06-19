@@ -1,0 +1,54 @@
+<% content_for :extra_include do %>
+
+<% end %>
+
+<% content_for :main_body do %>
+<div role="main" class="row">
+    	<div class="twelve columns">
+            <img src="<%= @main.banner.url(:original) %>" />
+        </div>
+</div>
+<div class="row">
+        <section class="teamFeatures">
+        	<article class="two columns">
+				<header class="headerTeamBorder"><%= @main.page_title.upcase %></header>
+            	<ul class="sidebar_links">
+					<% @teams.each do |member| %>
+						<li><a href="/our_team/<%= member.page_url %>"><%= member.first_name.capitalize %> <%= member.last_name.capitalize %></a></li>
+					<% end %>
+				</ul>
+			</article>
+			<article class="seven columns" id="member_container">
+				<header class="headerTeamBorder"><%= @member.first_name.upcase %> <% unless @member.middle_initial.nil? %><%= @member.middle_initial.upcase %><% end %><%= @member.last_name.upcase %></header>
+				<div class="member_container">
+					<div class="member_holder">
+						<div id="memberImg">
+			            	<img src="<%= @member.cover.url(:medium) %>" />
+					  	</div>
+					  	<div class="member_description">
+		                	<h4><% @member.position %></h4>
+		                	<% unless @member.brief_intro.nil? || @member.brief_intro.blank? %>
+		                		<%= raw @member.brief_intro %>
+		                	<% end %>	
+		                </div>
+				  	</div>
+				  	<div class="row">
+				  		<section>
+				  			<%= raw @member.body %>
+				  			<br/>
+				  			<div class="contact_info">
+			        			<p style="text-align: right;"><%= @member.phone_direct %> (Direct)<br/>
+			        			<%= @member.mobile_no %> (Mobile)<br/>
+			        			<a href="mailto:<%= @member.email %>"><%= @member.email %></a></p>
+		        			</div>
+				  		</section>
+				    </div>
+			    </div>
+			</article>
+			<article class="three columns links">
+        	<header class="headerTeamBorder">LINKS</header>
+				<p>Link to email <a href="mailto:<%= @member.email %>">our leader</a></p>
+        	</article>
+        </section>
+</div>
+<% end %>

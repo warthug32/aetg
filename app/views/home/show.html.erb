@@ -1,0 +1,8 @@
+<% content_for :extra_include do %>
+
+<% end %>
+
+<% content_for :main_body do %>
+	<span class="subpage-title"><%= @page.page_title%></span>
+	<%=raw @page.body %>
+<% end %>

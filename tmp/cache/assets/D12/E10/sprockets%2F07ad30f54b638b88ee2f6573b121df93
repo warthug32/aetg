@@ -1,0 +1,706 @@
+o: ActiveSupport::Cache::Entry	:@value"Q{"required_assets_digest"%d7ae5349b43c4d271b8a4896b59ed063"content_type"text/css"
+class"BundledAsset"
+mtime"2012-03-12T15:17:27+08:00"_version"%aa7d0db7619379e13b08335dee027df2"digest"%808f679b9a56dc64e99e06052d2e3716"pathname"H$root/app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss"logical_path"&admin/css/jquery.fullcalendar.css"lengthi£O"source"£O/*
+ * FullCalendar v1.5.1 Stylesheet
+ *
+ * Copyright (c) 2011 Adam Shaw
+ * Dual licensed under the MIT and GPL licenses, located in
+ * MIT-LICENSE.txt and GPL-LICENSE.txt respectively.
+ *
+ * Date: Sat Apr 9 14:09:51 2011 -0700
+ *
+ */
+/* line 14, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fullcalendar {
+  margin-bottom: 25px;
+}
+
+/* line 15, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fullcalendar table, .fullcalendar tbody, .fullcalendar tr {
+  border: none;
+}
+
+/* line 16, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc {
+  direction: ltr;
+  text-align: left;
+}
+
+/* line 21, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 27, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+html .fc,
+.fc table {
+  font-size: 1em;
+}
+
+/* line 32, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc td,
+.fc th {
+  padding: 0;
+  vertical-align: top;
+}
+
+/* Header
+------------------------------------------------------------------------*/
+/* line 41, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fullcalendar .fc-header td {
+  white-space: nowrap;
+  border: none;
+}
+
+/* line 45, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fullcalendar .fc-header tr {
+  background: none;
+}
+
+/* line 46, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-header-left {
+  width: 25%;
+  text-align: left;
+}
+
+/* line 51, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-header-center {
+  text-align: center;
+}
+
+/* line 55, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-header-right {
+  width: 25%;
+  text-align: right;
+}
+
+/* line 60, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-header-title {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 65, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fullcalendar .fc-header-title h2 {
+  margin-top: 0;
+  white-space: nowrap;
+  text-shadow: none;
+  font-size: 156%;
+  padding-top: 10px;
+}
+
+/* line 73, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc .fc-header-space {
+  padding-left: 10px;
+}
+
+/* line 77, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-header .fc-button {
+  margin-bottom: 1em;
+  vertical-align: top;
+}
+
+/* buttons edges butting together */
+/* line 84, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-header .fc-button {
+  margin-right: 5px;
+}
+
+/* line 88, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-header .fc-corner-right {
+  margin-right: 1px;
+  /* back to normal */
+}
+
+/* line 92, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-header .ui-corner-right {
+  margin-right: 0;
+  /* back to normal */
+}
+
+/* button layering (for border precedence) */
+/* line 99, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-header .fc-state-hover,
+.fc-header .ui-state-hover {
+  z-index: 2;
+}
+
+/* line 103, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-header .fc-state-down {
+  z-index: 3;
+}
+
+/* line 108, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-header .fc-state-active,
+.fc-header .ui-state-active {
+  z-index: 4;
+}
+
+/* Content
+------------------------------------------------------------------------*/
+/* line 115, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-content {
+  clear: both;
+}
+
+/* line 119, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-view {
+  width: 100%;
+  /* needed for view switching (when view is absolute) */
+  overflow: hidden;
+}
+
+/* Cell Styles
+------------------------------------------------------------------------*/
+/* line 128, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-widget-header,
+.fc-widget-content {
+  /* <td>, usually */
+  border: 1px solid #ccc;
+}
+
+/* line 132, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-state-highlight {
+  /* <td> today cell */
+  /* TODO: add .fc-today to <th> */
+  background: #ffc;
+  box-shadow: 0 0 5px #999;
+}
+
+/* line 137, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-cell-overlay {
+  /* semi-transparent rectangle while dragging */
+  background: #9cf;
+  opacity: .2;
+  filter: alpha(opacity=20);
+  /* for IE */
+}
+
+/* Buttons
+------------------------------------------------------------------------*/
+/* line 148, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* line 154, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-button-inner {
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+
+/* line 160, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-button-content {
+  position: relative;
+  float: left;
+  height: 1.9em;
+  line-height: 1.9em;
+  padding: 0 .6em;
+  white-space: nowrap;
+}
+
+/* icon (for jquery ui) */
+/* line 171, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-button-content .fc-icon-wrap {
+  position: relative;
+  float: left;
+  top: 50%;
+}
+
+/* line 177, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-button-content .ui-icon {
+  position: relative;
+  float: left;
+  margin-top: -50%;
+  *margin-top: 0;
+  *top: -50%;
+}
+
+/* button states (determines colors)  */
+/* line 187, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-state-default {
+  border: 1px solid;
+  border-color: #cb6652 #b74d39 #803121;
+  background: -moz-linear-gradient(top, #faa796, #d06c57 5%, #ae432e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#faa796), to(#ae432e), color-stop(0.05, #d06c57));
+  background: -o-linear-gradient(top, #faa796, #d06c57 5%, #ae432e 100%);
+  padding: 4px 15px 0;
+  margin-bottom: 2px;
+  -webkit-box-shadow: 0 1px 2px #999;
+  -moz-box-shadow: 0 1px 2px #999;
+  box-shadow: 0 1px 2px #999;
+  font-weight: normal;
+  color: #fce8e3;
+  height: 28px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-decoration: none;
+  text-shadow: 0 1px 2px #666;
+  white-space: nowrap;
+  vertical-align: baseline;
+  overflow: visible;
+  width: auto;
+}
+
+/* line 210, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.no-cssgradients .fc-state-default {
+  background: #ae432e url(/assets/admin/img/btns/btn_red.png) repeat-x left top;
+}
+
+/* line 211, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-state-default.fc-button-today, .fc-button-today {
+  background: #f2f2f2;
+  border: 1px solid #E6E6E6;
+  box-shadow: none;
+  text-shadow: none;
+  color: #999;
+}
+
+/* line 218, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.nested .fc-state-default.fc-button-today, .nested .fc-button-today {
+  border-color: #bfbfbf;
+}
+
+/* line 219, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-button-today.fc-state-hover, .fc-state-hover {
+  border: 1px solid;
+  border-color: #cb6652 #b74d39 #803121;
+  -webkit-box-shadow: 0 1px 2px #999;
+  -moz-box-shadow: 0 1px 2px #999;
+  box-shadow: 0 1px 2px #999;
+  text-shadow: 0 1px 2px #666;
+  background: -moz-linear-gradient(top, #faa796, #d06c57 5%, #943a28 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#faa796), to(#943a28), color-stop(0.05, #d06c57));
+  background: -o-linear-gradient(top, #faa796, #d06c57 5%, #943a28 100%);
+  color: #fff;
+}
+
+/* line 231, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.no-cssgradients .fc-state-hover, .no-cssgradients .fc-button-today.fc-state-hover {
+  background: #963c2a url(/assets/admin/img/btns/btn_red_hover.png) repeat-x left top;
+}
+
+/* line 234, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-state-default.fc-state-active,
+.fc-state-active {
+  border-color: #555;
+  background: #777;
+  color: #fff;
+}
+
+/* line 241, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-state-disabled,
+.fc-state-disabled .fc-button-inner {
+  color: #999;
+  border-color: #ddd;
+}
+
+/* line 246, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-state-disabled {
+  cursor: default;
+}
+
+/* line 250, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-state-disabled .fc-button-effect {
+  display: none;
+}
+
+/* line 253, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-button-today.fc-state-disabled {
+  color: #fff;
+}
+
+/* Global Event Styles
+------------------------------------------------------------------------*/
+/* line 259, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-event {
+  border-style: solid;
+  border-width: 0;
+  font-size: .85em;
+  cursor: default;
+}
+
+/* line 267, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+a.fc-event,
+.fc-event-draggable {
+  cursor: pointer;
+}
+
+/* line 271, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+a.fc-event {
+  text-decoration: none;
+}
+
+/* line 275, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-rtl .fc-event {
+  text-align: right;
+}
+
+/* line 279, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-event-skin {
+  background-color: #058dc7;
+  /* default BACKGROUND color */
+  color: #fff;
+  /* default TEXT color */
+  -webkit-box-shadow: 0 1px 2px #999;
+  -moz-box-shadow: 0 1px 2px #999;
+  box-shadow: 0 1px 2px #999;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 289, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-event-inner {
+  position: relative;
+  height: 100%;
+  padding: 5px;
+  border: 0;
+  overflow: hidden;
+}
+
+/* line 298, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-event-time,
+.fc-event-title {
+  padding: 0 1px;
+}
+
+/* line 302, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc .ui-resizable-handle {
+  /*** TODO: don't use ui-resizable anymore, change class ***/
+  display: block;
+  position: absolute;
+  z-index: 99999;
+  overflow: hidden;
+  /* hacky spaces (IE6/7) */
+  font-size: 300%;
+  /* */
+  line-height: 50%;
+  /* */
+}
+
+/* Horizontal Events
+------------------------------------------------------------------------*/
+/* line 316, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-event-hori {
+  border: 0;
+  margin-bottom: 1px;
+}
+
+/* resizable */
+/* line 323, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-event-hori .ui-resizable-e {
+  top: 0           !important;
+  /* importants override pre jquery ui 1.7 styles */
+  right: -3px !important;
+  width: 7px       !important;
+  height: 100%     !important;
+  cursor: e-resize;
+}
+
+/* line 331, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-event-hori .ui-resizable-w {
+  top: 0           !important;
+  left: -3px !important;
+  width: 7px       !important;
+  height: 100%     !important;
+  cursor: w-resize;
+}
+
+/* line 339, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-event-hori .ui-resizable-handle {
+  _padding-bottom: 14px;
+  /* IE6 had 0 height */
+}
+
+/* Fake Rounded Corners (for buttons and events)
+------------------------------------------------------------*/
+/* line 348, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-corner-left {
+  margin-left: 1px;
+}
+
+/* line 353, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-corner-left .fc-button-inner,
+.fc-corner-left .fc-event-inner {
+  margin-left: -1px;
+}
+
+/* line 357, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-corner-right {
+  margin-right: 1px;
+}
+
+/* line 362, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-corner-right .fc-button-inner,
+.fc-corner-right .fc-event-inner {
+  margin-right: -1px;
+}
+
+/* line 366, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-corner-top {
+  margin-top: 1px;
+}
+
+/* line 370, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-corner-top .fc-event-inner {
+  margin-top: -1px;
+}
+
+/* line 374, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-corner-bottom {
+  margin-bottom: 1px;
+}
+
+/* line 378, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-corner-bottom .fc-event-inner {
+  margin-bottom: -1px;
+}
+
+/* Reusable Separate-border Table
+------------------------------------------------------------*/
+/* line 385, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+table.fc-border-separate {
+  border-collapse: separate;
+}
+
+/* line 390, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-border-separate th,
+.fc-border-separate td {
+  border-width: 1px 0 0 1px;
+}
+
+/* line 395, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-border-separate th.fc-last,
+.fc-border-separate td.fc-last {
+  border-right-width: 1px;
+}
+
+/* line 400, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-border-separate tr.fc-last th,
+.fc-border-separate tr.fc-last td {
+  border-bottom-width: 1px;
+}
+
+/* line 405, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-border-separate tbody tr.fc-first td,
+.fc-border-separate tbody tr.fc-first th {
+  border-top-width: 0;
+}
+
+/* Month View, Basic Week View, Basic Day View
+------------------------------------------------------------------------*/
+/* line 414, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-grid th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 419, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-grid .fc-day-number {
+  float: right;
+  padding: 5px;
+  font-size: 118%;
+  color: #a6a6a6;
+}
+
+/* line 426, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-grid .fc-other-month .fc-day-number {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  /* for IE */
+  /* opacity with small font can sometimes look too faded
+     might want to set the 'color' property instead
+     making day-numbers bold also fixes the problem */
+}
+
+/* line 434, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-grid .fc-day-content {
+  clear: both;
+  padding: 2px 2px 1px;
+  /* distance between events and day edges */
+}
+
+/* event styles */
+/* line 441, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-grid .fc-event-time {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* right-to-left */
+/* line 448, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-rtl .fc-grid .fc-day-number {
+  float: left;
+}
+
+/* line 452, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-rtl .fc-grid .fc-event-time {
+  float: right;
+}
+
+/* Agenda Week View, Agenda Day View
+------------------------------------------------------------------------*/
+/* line 461, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda table {
+  border-collapse: separate;
+}
+
+/* line 465, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda-days th {
+  text-align: center;
+}
+
+/* line 469, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda .fc-agenda-axis {
+  width: 50px;
+  padding: 0 4px;
+  vertical-align: middle;
+  text-align: right;
+  white-space: nowrap;
+  font-weight: normal;
+}
+
+/* line 478, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda .fc-day-content {
+  padding: 2px 2px 1px;
+}
+
+/* make axis border take precedence */
+/* line 484, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda-days .fc-agenda-axis {
+  border-right-width: 1px;
+}
+
+/* line 488, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda-days .fc-col0 {
+  border-left-width: 0;
+}
+
+/* all-day area */
+/* line 494, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda-allday th {
+  border-width: 0 1px;
+}
+
+/* line 498, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda-allday .fc-day-content {
+  min-height: 34px;
+  /* TODO: doesnt work well in quirksmode */
+  _height: 34px;
+}
+
+/* divider (between all-day and slots) */
+/* line 505, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda-divider-inner {
+  height: 2px;
+  overflow: hidden;
+}
+
+/* line 510, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-widget-header .fc-agenda-divider-inner {
+  background: #eee;
+}
+
+/* slot rows */
+/* line 516, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda-slots th {
+  border-width: 1px 1px 0;
+}
+
+/* line 520, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda-slots td {
+  border-width: 1px 0 0;
+  background: none;
+}
+
+/* line 525, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda-slots td div {
+  height: 20px;
+}
+
+/* line 530, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda-slots tr.fc-slot0 th,
+.fc-agenda-slots tr.fc-slot0 td {
+  border-top-width: 0;
+}
+
+/* line 535, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda-slots tr.fc-minor th,
+.fc-agenda-slots tr.fc-minor td {
+  border-top-style: dotted;
+}
+
+/* line 539, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda-slots tr.fc-minor th.ui-widget-header {
+  *border-top-style: solid;
+  /* doesn't work with background in IE6/7 */
+}
+
+/* Vertical Events
+------------------------------------------------------------------------*/
+/* line 548, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-event-vert {
+  border-width: 0 1px;
+}
+
+/* line 553, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-event-vert .fc-event-head,
+.fc-event-vert .fc-event-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 560, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-event-vert .fc-event-time {
+  white-space: nowrap;
+  font-size: 10px;
+}
+
+/* line 565, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-event-vert .fc-event-bg {
+  /* makes the event lighter w/ a semi-transparent overlay  */
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: .3;
+  filter: alpha(opacity=30);
+}
+
+/* line 578, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc .ui-draggable-dragging .fc-event-bg,
+.fc-select-helper .fc-event-bg {
+  display: none\9;
+  /* for IE6/7/8. nested opacity filters while dragging don't work */
+}
+
+/* resizable */
+/* line 584, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-event-vert .ui-resizable-s {
+  bottom: 0        !important;
+  /* importants override pre jquery ui 1.7 styles */
+  width: 100%      !important;
+  height: 8px      !important;
+  overflow: hidden !important;
+  line-height: 8px !important;
+  font-size: 11px  !important;
+  font-family: monospace;
+  text-align: center;
+  cursor: s-resize;
+}
+
+/* line 596, ../../../../app/assets/stylesheets/admin/css/jquery.fullcalendar.css.scss */
+.fc-agenda .ui-resizable-resizing {
+  /* TODO: better selector */
+  _overflow: hidden;
+}
+:@expires_in0:@compressedF:@created_atf1331724114.7967501 ýô

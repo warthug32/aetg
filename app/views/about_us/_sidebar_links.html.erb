@@ -1,0 +1,7 @@
+<% for n in @main.pages.order("display_order") %>
+	<% unless n.pages.count > 0 %>
+				<li>
+					<a href="/about_us/<%= n.page_url %>"><%= n.page_title %></a>
+				</li>
+	<% end %>
+<% end %>

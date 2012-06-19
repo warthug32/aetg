@@ -1,0 +1,39 @@
+<% content_for :extra_include do %>
+
+<% end %>
+
+<% content_for :main_body do %>
+
+<div role="main" class="row">
+    	<div class="twelve columns">
+            <img src="<%= @main.banner.url(:original) %>" />
+        </div>
+</div>
+
+<div class="row">
+        <section class="executiveFeatures">
+			<article class="three columns posts">
+				<header class="headerExecutive">SEARCH JOBS</header>
+				<%= render 'sidebar_links'%>
+			</article>
+			<article class="nine columns posts">
+				<header class="headerExecutive"><%= @header_title %></header>
+				<div class="jobposts_container">
+					<div class="post_control">
+						<% unless @job_posts.empty? %>
+						<%= render('post_control')%>
+						<% else %>
+						<div class="panel" style="height:40px;width:80%">
+		                	<p style="text-align: left;font-weight: bold;font-size:16px;color:#330066;;"><%= t :no_available %></p>
+		                	</div>
+						<% end %>
+					</div>
+					<div class="post_data" id="">
+						<%= render 'job_posts'%>
+					</div>
+				</div>
+				
+			</article>
+        </section>
+        </div>
+<% end %>

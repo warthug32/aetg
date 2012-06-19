@@ -1,0 +1,45 @@
+<% content_for :header_meta do%>
+<!-- // Meta //  -->
+<meta charset="utf-8">   
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<% end %>
+<% content_for :content do %>
+	<%= form_for(@industry, :as => :industry, :validate => true, :url => admin_industry_path(@industry)) do |f| %>
+	
+	   <fieldset>
+	        <legend><h2>Create Industry</h2></legend>
+
+	        <dl>
+				<dt>
+	                <label>Type Name</label>
+	            </dt>
+	            <dd>
+					<%= f.text_field :name, :class => 'small' %>  
+	            </dd>
+				<dt>
+	                <label>Zh Name</label>
+	            </dt>
+	            <dd>
+					<%= f.text_field :name_zh, :class => 'small' %>  
+	            </dd>
+				<dt>
+	                <label>Gb Name</label>
+	            </dt>
+	            <dd>
+					<%= f.text_field :name_gb, :class => 'small' %>  
+	            </dd>
+			</dl>
+		
+	        <p>
+	            <button type="submit" value="Save">Submit</button> or <a href="/admin/<%= session[:current_page_name].downcase %>" title="Leave without saving" rel="tooltip">Cancel</a>
+	        </p>
+	        <br />
+
+	    </fieldset>
+	<% end %>
+	<div>
+	    <a href="/admin/<%= session[:current_page_name].downcase %>">Back to List</a>
+	</div>
+<% end %>

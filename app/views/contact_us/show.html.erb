@@ -1,0 +1,59 @@
+<% content_for :extra_include do %>
+
+<% end %>
+
+<% content_for :main_body do %>
+<div role="main" class="row">
+    	<div class="twelve columns">
+            <img src="<%= @main.banner.url(:original) %>" />
+        </div>
+</div>
+
+<div class="row">
+    <section class="contactusFeatures">
+	<article class="nine columns" style="margin-right:0;">
+   	<header class="headerContactUs"><%= @main.page_title.upcase %></header>
+			<div class="row">
+				<section>
+					<% @branches.each_with_index do |branch, index| %>
+	    		 		<% if index % 2 == 0 %>
+						<article class="six" style="float:left;padding-right:10px;margin-left:0px;padding-left:22px;">
+							<header class="branch"><%= branch.name %></HONG></header>
+							<ul>
+								<li><%= branch.address %></li>
+								<li>Tel: <%= branch.telephone %></li>
+								<li>Fax: <%= branch.fax %></li>
+							</ul>
+						</article>
+						<% else %>
+						<article class="six" style="float:left;padding-right:0;margin-left:0px;">
+							<header class="branch"><%= branch.name %></header>
+							<ul>
+								<li><%= branch.address %></li>
+								<li>Tel: <%= branch.telephone %></li>
+								<li>Fax: <%= branch.fax %></li>
+							</ul>
+						</article>
+						<% end %>
+					<% end%>
+				</section>
+			</div>
+		<div class="row">
+			<section>
+				<article class="six columns" style="float:left;padding-right:0;margin-left:0px;padding-left:22px;">
+					<header class="branch">E-mail</header>
+					<ul>
+						<li><a href="mailto:info@asia-executives.com">info@asia-executives.com</a></li>
+					</ul>
+				</article>
+			</section>
+		</div>
+	</article>
+      
+    <article class="three columns" style="margin-left:0;float:right;padding-left:0;">
+   		<header class="headerContactUs">LINKS</header>
+		<p>Link to <a href="">CV submission</a></p>
+    </article>
+</section>
+      </div>
+<% end %>

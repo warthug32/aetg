@@ -1,0 +1,22 @@
+<% @job_posts.each do |post|%>	
+<div class="job_post">
+	<p class="header"><a href="/opportunities/show/<%= post[:id] %>"><%= post[:position] %></a></p>
+	<div class="description"><%= raw(truncate(post[:description], :length => 110, :omission => ' ...')) %></div>
+	<table>
+		<tbody>
+			<tr>
+				<td style="width:230px;"><strong>Location:&nbsp;</strong> <%= post[:location] %></td>
+				<td style="width:100px;"><strong>Date:&nbsp;</strong> <%= post[:date_posted] %></td>
+				<td><strong>Salary:&nbsp;</strong> 
+					<%= number_to_currency(post[:salary1], :precision => 0) %>&nbsp;
+					<% unless post[:salary2].nil? %> 
+					&ndash;&nbsp;<%= number_to_currency(post[:salary2], :precision => 0) %>&nbsp;
+					<% end %>
+					HKD/ANNUM
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="classification"><strong>Classification:</strong> <span><%= post[:classification] %></span></p>
+</div>
+<% end %>

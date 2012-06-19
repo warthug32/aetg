@@ -1,0 +1,39 @@
+<% content_for :extra_include do %>
+
+<% end %>
+
+<% content_for :main_body do %>
+<div role="main" class="row">
+    	<div class="twelve columns">
+            <img src="<%= @main.banner.url(:original) %>" />
+        </div>
+</div>
+
+<div class="row">
+	<section class="servicesFeatures">
+		<article class="ten columns">
+		<header class="headerServices"><%= @main.page_title.upcase %></header>
+		<div class="row">
+			<% unless @main.content_images.nil? %>
+				<% @main.content_images.each do |c| %>
+					<div class="service">
+						<p><a href="<%= c.url %>" title="<%= c.title %>" target="blank"><img src="<%= c.content_image.url(:original) %>"/></a></p>
+						<%= raw(c.content) %>
+					</div>
+				<% end %>
+			<% end %>
+			
+		</div>
+		</article>
+	
+		<article class="two columns links">
+		<header class="headerServices">LINKS</header>
+			<ul>
+        		<li>Link to <a href="">submit CV</a></li>
+        		<li>Link to <a href="">contact us</a></li>
+        	</ul>
+		</article>
+		
+	</section>
+</div>
+<% end %>

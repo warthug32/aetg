@@ -1,0 +1,85 @@
+<% content_for :extra_include do %>
+
+<% end %>
+
+<% content_for :main_body do %>
+<div style="padding:0px 20px">
+	<div id="culture-col-1" class="left">
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<% count = 0 %>
+		<% for c in @cultures %>
+			<a href="/publications/<%=c.id%>/<%=c.browser_url%>">
+			<div class="small-culture-box">
+				<img src="<%= c.cover.url(:large) %>" />
+				<p>
+					<%= c.title %>
+				</p>
+			</div>
+			</a>
+			<% count = count + 1 %>
+			<% break if count == 2%>
+		<% end %>
+	</div>
+	<div id="culture-col-2" class="left">
+		
+		<% count = 0 %>
+		<% for c in @cultures %>
+			<% if count == 2 %>
+				<a href="/publications/<%=c.id%>/<%=c.browser_url%>">
+				<div class="large-culture-box">
+					<img src="<%= c.cover.url(:large) %>" />
+					<p>
+						<%= c.title %>
+					</p>
+				</div>
+				</a>
+			<% elsif count > 2 %>
+			<a href="/publications/<%=c.id%>/<%=c.browser_url%>">
+			<div class="small-culture-box">
+				<img src="<%= c.cover.url(:large) %>" />
+				<p>
+					<%= c.title %>
+				</p>
+			</div>
+			</a>
+			<% end %>
+			<% count = count + 1 %>
+			<% break if count == 11 %>
+		<% end %>
+	</div>
+	<div id="culture-col-3" class="left">
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<% count = 0 %>
+		<% for c in @cultures %>
+		
+			<% if count >= 11 %>
+			<a href="/publications/<%=c.id%>/<%=c.browser_url%>">
+			<div class="small-culture-box">
+				<img src="<%= c.cover.url(:large) %>" />
+				<p>
+					<%= c.title %>
+				</p>
+			</div>
+			</a>
+			<% end %>
+			<% count = count + 1 %>
+		<% end %>
+	</div>
+	
+	<br class="clear"/>
+</div>
+<% end %>
